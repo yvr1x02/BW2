@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import "../assets-epicode/css/circular-font.css";
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -7020,4 +7022,7 @@ progress {
   .d-print-none {
     display: none !important;
   }
+}
+body {
+  font-family: "Circular";
 }/*# sourceMappingURL=style.css.map */
