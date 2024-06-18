@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./assets/dist/css/style.min.css" />
     <link rel="stylesheet" href="./assets-epicode/css/circular-font.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="./footer.css" />
   </head>
   <body class="bg-black m-3">
     <div class="container-fluid overflow-hidden">
@@ -227,7 +228,7 @@
           </div>
         </div>
         <div class="col-2 d-flex flex-column" id="rightBar">
-          <div class="bg-dark rounded p-3" style="height: 100vh">
+          <div class="bg-dark rounded p-3" style="height: 50vh">
             <div class="pt-2 text-white bg-dark rounded d-flex align-items-center justify-content-between">
               <p class="m-0 ps-1 text-white text-opacity-75">
                 <b>Attività amici</b>
@@ -341,7 +342,60 @@
         </div>
       </div>
     </div>
-
+    <footer class="container-fluid position-relative">
+      <div class="row bg-dark rounded text-white mt-2 px-4 position-fixed bottom-0 start-0 end-0">
+        <div class="col-3">
+          <div class="container-fluid d-flex flex-column p-0 mt-3">
+            <div class="d-flex column-gap-2">
+              <div>
+                <img src="./assets-epicode/imgs/main/preferiti.png" alt="" width="48" class="rounded" />
+              </div>
+              <div class="d-flex flex-column">
+                <p class="text-white mb-0">Brani che ti piacciono</p>
+                <p class="text-white text-opacity-75">
+                  <i class="bi bi-pin-angle-fill text-success pe-1"></i>Playlist • Brani
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="row">
+            <div class="col d-flex justify-content-center align-items-center column-gap-3">
+              <i class="bi bi-shuffle"></i>
+              <i class="bi bi-skip-start-fill"></i>
+              <i class="bi bi-play-circle-fill fs-2"></i>
+              <i class="bi bi-skip-end-fill"></i>
+              <i class="bi bi-repeat"></i>
+            </div>
+          </div>
+          <div class="row g-42">
+            <div class="col-1">
+              <span class="fs-6 fw-lighter text-body-light">00:00</span>
+            </div>
+            <div class="col-10">
+              <input type="range" />
+            </div>
+            <div class="col-1">
+              <span class="fs-6 fw-lighter text-body-light">00:00</span>
+            </div>
+          </div>
+          <!-- <figure class="justify-content-center">
+            <audio class="m-2" controls src="/media/cc0-audio/t-rex-roar.mp3"></audio>
+          </figure> -->
+        </div>
+        <div class="col-3 d-flex justify-content-center align-items-center column-gap-2">
+          <i class="bi bi-file-play"></i>
+          <i class="bi bi-mic"></i>
+          <i class="bi bi-list"></i>
+          <i class="bi bi-boombox"></i>
+          <i class="bi bi-volume-up"></i>
+          <input type="range" id="track-range" />
+          <i class="bi bi-pip"></i>
+          <i class="bi bi-arrows-angle-expand"></i>
+        </div>
+      </div>
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
