@@ -26,7 +26,8 @@
   <body class="bg-black m-3">
     <div class="container-fluid overflow-hidden">
       <div class="row gx-2">
-        <div class="col-3 d-flex flex-column">
+        <div class="col-2 d-flex flex-column">
+          <!-- sidebar sinistra -->
           <div class="p-3 bg-dark rounded">
             <!-- <i class="bi bi-spotify text-white fs-3"><span class="px-1">Spotify</span></i> -->
             <svg
@@ -42,14 +43,6 @@
               ></path>
             </svg>
             <nav>
-              <!-- <div class="dropdown">
-                <button class="btn btn-dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">. . .</button>
-                <ul class="dropdown-menu dropdown-menu-dark">
-                  <li><a class="dropdown-item" href="#">Settings</a></li>
-                  <li><a class="dropdown-item" href="#">File</a></li>
-                  <li><a class="dropdown-item" href="#">View</a></li>
-                </ul>
-              </div> -->
               <ul class="list-group">
                 <li class="list-group-item bg-dark border border-0 p-0 py-2">
                   <a href="#" class="text-decoration-none"
@@ -176,78 +169,10 @@
                 </div>
               </div>
             </div>
-            <!-- <div class="row">
-              <div class="col-12 mt-2">
-                <div class="row gx-2">
-                  <div class="col-2">
-                    <img
-                      src="./assets-epicode/imgs/main/preferiti.png"
-                      alt=""
-                      width="100%"
-                      class="rounded"
-                    />
-                  </div>
-                  <div class="col-10 d-flex flex-column pt-1">
-                    <p class="text-white mb-0">Brani che ti piacciono</p>
-                    <div class="d-flex">
-                      <i class="bi bi-pin-angle-fill text-success pe-1"></i>
-                      <p class="text-white text-opacity-75">Playlist • Brani</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 mt-2">
-                <div class="row gx-2">
-                  <div class="col-2">
-                    <img
-                      src="./assets-epicode/imgs/main/preferiti.png"
-                      alt=""
-                      width="100%"
-                      class="rounded"
-                    />
-                  </div>
-                  <div class="col-10 d-flex flex-column pt-1">
-                    <p class="text-white mb-0">Brani che ti piacciono</p>
-                    <div class="d-flex">
-                      <i class="bi bi-pin-angle-fill text-success pe-1"></i>
-                      <p class="text-white text-opacity-75">Playlist • Brani</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 mt-2">
-                <div class="row gx-2">
-                  <div class="col-2">
-                    <img src="./assets-epicode/imgs/main/preferiti.png" alt="" width="100%" class="rounded" />
-                  </div>
-                  <div class="col-10 d-flex flex-column pt-1">
-                    <p class="text-white mb-0">Brani che ti piacciono</p>
-                    <div class="d-flex">
-                      <i class="bi bi-pin-angle-fill text-success pe-1"></i>
-                      <p class="text-white text-opacity-75">Playlist • Brani</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 mt-2">
-                <div class="row gx-2">
-                  <div class="col-2">
-                    <img src="./assets-epicode/imgs/main/preferiti.png" alt="" width="100%" class="rounded" />
-                  </div>
-                  <div class="col-10 d-flex flex-column pt-1">
-                    <p class="text-white mb-0">Brani che ti piacciono</p>
-                    <div class="d-flex">
-                      <i class="bi bi-pin-angle-fill text-success pe-1"></i>
-                      <p class="text-white text-opacity-75">Playlist • Brani</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> -->
           </div>
         </div>
-        <div class="col-7" id="topBar">
-          <div class="p-3 bg-dark d-flex text-white justify-content-between rounded">
+        <div class="col-8" id="topBar">
+          <div class="p-3 d-flex text-white justify-content-between rounded">
             <div class="d-flex gap-4">
               <a href="#" class="text-decoration-none"
                 ><i class="bi bi-caret-left text-white"></i
@@ -258,7 +183,9 @@
             </div>
             <div class="d-flex gap-3">
               <a href="#" class="text-decoration-none"><i class="bi bi-bell text-white"></i></a>
-              <a id="show" class="text-decoration-none"><i class="bi bi-people text-white"></i></a>
+              <a href="#" class="text-decoration-none" id="show"
+                ><i class="bi bi-people text-white"></i
+              ></a>
 
               <img
                 src="./assets-epicode/imgs/main/DSC_0487.jpg"
@@ -269,21 +196,91 @@
               />
             </div>
           </div>
+          <section>
+            <div class="m-3 text-white">
+              <div class="row g-0 align-items-stretch">
+                <div class="col-4">
+                  <img
+                    src="./assets-epicode/imgs/main/image-1.jpg"
+                    class="img-fluid rounded-start h-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-8 d-flex flex-column justify-content-between">
+                  <div class="d-flex flex-column justify-content-center flex-grow-1">
+                    <h5 class="album-type mb-1">Album</h5>
+                    <h1 class="album-Title mb-1">TITLE</h1>
+                  </div>
+
+                  <div class="container-fluid d-flex flex-column p-0 mt-3">
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="./assets-epicode/imgs/main/preferiti.png"
+                        alt=""
+                        width="30"
+                        class="rounded-circle me-2"
+                      />
+                      <p class="text-white mb-0 me-2">Nome artista • anno • N Brani,</p>
+                      <p class="text-secondary mb-0">durata album</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-5 d-flex align-items-center">
+                <a href="#" class="text-success fs-1 px-2"
+                  ><i class="bi bi-play-circle-fill"></i
+                ></a>
+                <a href="#" class="text-white fs-3 px-3"><i class="bi bi-heart"></i></a>
+                <a href="#" class="text-white fs-3 px-3"><i class="bi bi-arrow-down-circle"></i></a>
+
+                <div class="dropdown px-2">
+                  <a
+                    class="btn text-white"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    . . .
+                  </a>
+                  <ul class="dropdown-menu mt-2 bg-dark dropdown-menu-dark">
+                    <li><a class="dropdown-item text-white" href="#">Aggiungi in coda</a></li>
+                    <li><a class="dropdown-item text-white" href="#">Inizia Jam</a></li>
+                    <li><a class="dropdown-item text-white" href="#">Condividi</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div>
+            <div class="row mx-4 text-white">
+              <div class="col-1">#</div>
+              <div class="col-7">Titolo</div>
+              <div class="col-3">Riproduzioni</div>
+              <div class="col-1"><i class="bi bi-clock"></i></div>
+              <hr />
+              <div class="col-1">1</div>
+              <div class="col-7"><h5>titolo</h5>
+            <p>
+                artista
+            </p>
+        </div>
+              <div class="col-3">150.344</div>
+              <div class="col-1">tempo</i></div>
+            </div>
+          </div>
         </div>
         <div class="col-2 d-flex flex-column" id="rightBar">
+          <!-- sidebar destra -->
           <div class="bg-dark rounded p-3" style="height: 100vh">
             <div
               class="pt-2 text-white bg-dark rounded d-flex align-items-center justify-content-between"
             >
-              <p class="m-0 ps-1 text-white text-opacity-75">
-                <b>Attività amici</b>
-              </p>
+              <p class="m-0 ps-1 text-white text-opacity-75"><b>Attività amici</b></p>
 
               <div class="align-items-center">
                 <i class="bi bi-person-plus text-white text-opacity-75 pe-4 fs-4 pb-1"></i>
-                <a id="hide">
-                  <i class="bi bi-x text-white text-opacity-75 fs-3"></i>
-                </a>
+                <a id="hide"> <i class="bi bi-x text-white text-opacity-75 fs-3"></i></a>
               </div>
             </div>
             <!-- rifatto -->
@@ -341,65 +338,6 @@
                 </div>
               </div>
             </div>
-
-            <!-- <div class="row">
-              <div class="col-12 mt-2">
-                <div class="row gx-2">
-                  <div class="col-2">
-                    <img src="./assets-epicode/imgs/main/preferiti.png" alt="" width="100%" class="rounded" />
-                  </div>
-                  <div class="col-10 d-flex flex-column pt-1">
-                    <p class="text-white mb-0">Brani che ti piacciono</p>
-                    <div class="d-flex">
-                      <i class="bi bi-pin-angle-fill text-success pe-1"></i>
-                      <p class="text-white text-opacity-75">Playlist • Brani</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 mt-2">
-                <div class="row gx-2">
-                  <div class="col-2">
-                    <img src="./assets-epicode/imgs/main/preferiti.png" alt="" width="100%" class="rounded" />
-                  </div>
-                  <div class="col-10 d-flex flex-column pt-1">
-                    <p class="text-white mb-0">Brani che ti piacciono</p>
-                    <div class="d-flex">
-                      <i class="bi bi-pin-angle-fill text-success pe-1"></i>
-                      <p class="text-white text-opacity-75">Playlist • Brani</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 mt-2">
-                <div class="row gx-2">
-                  <div class="col-2">
-                    <img src="./assets-epicode/imgs/main/preferiti.png" alt="" width="100%" class="rounded" />
-                  </div>
-                  <div class="col-10 d-flex flex-column pt-1">
-                    <p class="text-white mb-0">Brani che ti piacciono</p>
-                    <div class="d-flex">
-                      <i class="bi bi-pin-angle-fill text-success pe-1"></i>
-                      <p class="text-white text-opacity-75">Playlist • Brani</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 mt-2">
-                <div class="row gx-2">
-                  <div class="col-2">
-                    <img src="./assets-epicode/imgs/main/preferiti.png" alt="" width="100%" class="rounded" />
-                  </div>
-                  <div class="col-10 d-flex flex-column pt-1">
-                    <p class="text-white mb-0">Brani che ti piacciono</p>
-                    <div class="d-flex">
-                      <i class="bi bi-pin-angle-fill text-success pe-1"></i>
-                      <p class="text-white text-opacity-75">Playlist • Brani</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> -->
           </div>
         </div>
       </div>
