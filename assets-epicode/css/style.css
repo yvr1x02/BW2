@@ -1,3 +1,73 @@
 #topBar {
   transition: width 0.3s ease;
 }
+.card-text {
+  font-size: 0.8rem;
+}
+.card-title {
+  font-weight: 900;
+  font-size: 6rem;
+}
+#show {
+  cursor: pointer;
+}
+#middleCard {
+  background: rgb(19, 19, 19);
+  background: linear-gradient(
+    0deg,
+    rgba(19, 19, 19, 1) 29%,
+    rgba(41, 41, 41, 1) 100%
+  );
+}
+#song:hover {
+  background: rgb(68, 68, 68);
+}
+#play {
+  color: rgb(65, 160, 101);
+}
+#play:hover {
+  color: rgb(89, 226, 142);
+}
+#dots {
+  color: grey;
+  text-decoration: none;
+}
+#dots:hover {
+  color: white;
+}
+#bell {
+  color: rgb(160, 160, 160);
+}
+#show {
+  color: rgb(160, 160, 160);
+}
+#bell:hover {
+  color: white;
+}
+#show:hover {
+  color: white;
+}
+
+@media (min-width: 576px) {
+  .card-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-title {
+    font-size: 4.75rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-title {
+    font-size: 6rem;
+  }
+}
+
+@media (min-width: 1300px) {
+  .card-title {
+    font-size: 8.25rem;
+  }
+}
