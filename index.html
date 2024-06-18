@@ -62,7 +62,7 @@
               </ul>
             </nav>
           </div>
-          <div class="bg-dark rounded mt-2 p-3" style="height: 100vh">
+          <div class="bg-dark rounded mt-2 p-3 mb-5">
             <div class="pt-2 text-white bg-dark rounded d-flex align-items-center">
               <div class="d-flex align-items-center">
                 <svg
@@ -71,7 +71,7 @@
                   aria-hidden="true"
                   viewBox="0 0 24 24"
                   class="Svg-sc-ytk21e-0 bneLcE"
-                  style="width: 10%"
+                  width="30px"
                 >
                   <path
                     fill="#C7C8C9"
@@ -100,7 +100,7 @@
                   <img src="./assets-epicode/imgs/main/preferiti.png" alt="" width="48" class="rounded" />
                 </div>
                 <div class="d-flex flex-column">
-                  <p class="text-white mb-0">Brani che ti piacciono</p>
+                  <p class="text-white mb-0 text-truncate overflow-x-hidden">Brani che ti piacciono</p>
                   <p class="text-white text-opacity-75">
                     <i class="bi bi-pin-angle-fill text-success pe-1"></i>Playlist • Brani
                   </p>
@@ -126,7 +126,20 @@
                   <img src="./assets-epicode/imgs/main/preferiti.png" alt="" width="48" class="rounded" />
                 </div>
                 <div class="d-flex flex-column">
-                  <p class="text-white mb-0">Brani che ti piacciono</p>
+                  <p class="text-white mb-0 text-truncate overflow-x-hidden">Brani che ti piacciono</p>
+                  <p class="text-white text-opacity-75">
+                    <i class="bi bi-pin-angle-fill text-success pe-1"></i>Playlist • Brani
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid d-flex flex-column p-0 mt-3">
+              <div class="d-flex column-gap-2">
+                <div>
+                  <img src="./assets-epicode/imgs/main/preferiti.png" alt="" width="48" class="rounded" />
+                </div>
+                <div class="d-flex flex-column">
+                  <p class="text-white mb-0 text-truncate overflow-x-hidden">Brani che ti piacciono</p>
                   <p class="text-white text-opacity-75">
                     <i class="bi bi-pin-angle-fill text-success pe-1"></i>Playlist • Brani
                   </p>
@@ -134,7 +147,7 @@
               </div>
             </div>
             <!-- com'era prima -->
-            <div class="col-12 mt-2">
+            <!-- <div class="col-12 mt-2">
               <div class="row gx-2">
                 <div class="col-2">
                   <img src="./assets-epicode/imgs/main/preferiti.png" alt="" width="100%" class="rounded" />
@@ -147,7 +160,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
             <!-- <div class="row">
               <div class="col-12 mt-2">
                 <div class="row gx-2">
@@ -246,7 +259,7 @@
                   <img src="./assets-epicode/imgs/main/preferiti.png" alt="" width="48" class="rounded-circle" />
                 </div>
                 <div class="d-flex flex-column">
-                  <p class="text-white mb-0">Angelo Laera</p>
+                  <p class="text-white mb-0 text-truncate overflow-x-hidden">Angelo Laera</p>
                   <p class="text-white text-opacity-75">
                     <i class="bi bi-pin-angle-fill text-success pe-1"></i>Playlist • Brani
                   </p>
@@ -259,7 +272,7 @@
                   <img src="./assets-epicode/imgs/main/preferiti.png" alt="" width="48" class="rounded-circle" />
                 </div>
                 <div class="d-flex flex-column">
-                  <p class="text-white mb-0">Yuri Impellizzeri</p>
+                  <p class="text-white mb-0 text-truncate overflow-x-hidden">Yuri Impellizzeri</p>
                   <p class="text-white text-opacity-75">
                     <i class="bi bi-pin-angle-fill text-success pe-1"></i>Playlist • Brani
                   </p>
@@ -272,7 +285,7 @@
                   <img src="./assets-epicode/imgs/main/preferiti.png" alt="" width="48" class="rounded-circle" />
                 </div>
                 <div class="d-flex flex-column">
-                  <p class="text-white mb-0">Nicolas Petrusowski</p>
+                  <p class="text-white mb-0 text-truncate overflow-x-hidden">Nicolas Petrusowski</p>
                   <p class="text-white text-opacity-75">
                     <i class="bi bi-pin-angle-fill text-success pe-1"></i>Playlist • Brani
                   </p>
@@ -351,7 +364,7 @@
                 <img src="./assets-epicode/imgs/main/preferiti.png" alt="" width="48" class="rounded" />
               </div>
               <div class="d-flex flex-column">
-                <p class="text-white mb-0">Brani che ti piacciono</p>
+                <p class="text-white mb-0 text-truncate overflow-x-hidden">Brani che ti piacciono</p>
                 <p class="text-white text-opacity-75">
                   <i class="bi bi-pin-angle-fill text-success pe-1"></i>Playlist • Brani
                 </p>
@@ -373,8 +386,8 @@
             <div class="col-1">
               <span class="fs-6 fw-lighter text-body-light">00:00</span>
             </div>
-            <div class="col-10">
-              <input type="range" />
+            <div class="col-10 d-flex justify-content-center">
+              <input type="range" id="track-range" />
             </div>
             <div class="col-1">
               <span class="fs-6 fw-lighter text-body-light">00:00</span>
@@ -389,8 +402,8 @@
           <i class="bi bi-mic"></i>
           <i class="bi bi-list"></i>
           <i class="bi bi-boombox"></i>
-          <i class="bi bi-volume-up"></i>
-          <input type="range" id="track-range" />
+          <label for="range-volume"> <i class="bi bi-volume-up"></i></label>
+          <input type="range" id="range-volume" />
           <i class="bi bi-pip"></i>
           <i class="bi bi-arrows-angle-expand"></i>
         </div>
