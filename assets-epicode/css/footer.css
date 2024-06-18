@@ -1,0 +1,12 @@
+.sideBar {
+  margin-bottom: 60px;
+}
+.sideBar-library {
+  max-height: 70vh;
+}
+#track-range {
+  width: 450px;
+}
+#range-volume {
+  max-width: 80px;
+}
