@@ -5,12 +5,12 @@ const topBar = document.getElementById("topBar");
 
 hideBtn.addEventListener("click", () => {
   rightsideBar.style.display = "none";
-  topBar.classList.remove("col-7");
-  topBar.classList.add("col-9");
+  topBar.classList.remove("col-8");
+  topBar.classList.add("col-10");
 });
 
 showBtn.addEventListener("click", () => {
   rightsideBar.style.display = "block";
-  topBar.classList.remove("col-9");
-  topBar.classList.add("col-7");
+  topBar.classList.remove("col-10");
+  topBar.classList.add("col-8");
 });
