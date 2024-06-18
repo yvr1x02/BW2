@@ -7025,4 +7025,16 @@ progress {
 }
 body {
   font-family: "Circular";
+}
+
+#rightBar {
+  display: block;
+}
+
+#show {
+  cursor: pointer;
+}
+
+#hide {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
