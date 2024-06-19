@@ -1,3 +1,7 @@
+#topBar {
+  transition: width 0.3s ease;
+}
+
 #play {
   color: rgb(65, 160, 101);
   cursor: pointer;
@@ -43,4 +47,7 @@
   align-items: center;
   height: 100%;
   padding-top: 0.5em;
+}
+.bg-spotify {
+  background-color: #121212;
 }
