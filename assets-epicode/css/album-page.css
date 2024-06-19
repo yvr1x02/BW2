@@ -19,16 +19,28 @@
   color: green;
 }
 
-.trackElement:hover {
+.track-element:hover {
   background-color: rgb(53, 53, 53);
 }
-#topBar {
-  transition: width 0.3s ease;
+
+.icon-text {
+  display: none;
+  font-size: 1.7em;
 }
-.bg-spotify {
-  background-color: #121212;
+.number-text {
+  display: inline;
+}
+.track-element:hover .number-text {
+  display: none;
+}
+.track-element:hover .icon-text {
+  display: inline;
 }
 
-body {
-  font-family: "Circular";
+.track-element .col-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-top: 0.5em;
 }
