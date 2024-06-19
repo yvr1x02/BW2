@@ -1,19 +1,26 @@
-const SONG_URL = "";
-const API_KEY = "";
+const SONG_URL = "https://striveschool-api.herokuapp.com/api/deezer/search?q=eminem";
 
-const fetchSong = () => {
-  fetch(SONG_URL, {
-    headers: {
-      Authorization: API_KEY,
-    },
-  })
+const fetchSearchSong = () => {
+  fetch(SONG_URL)
     .then((resp) => {
       if (resp.ok) {
-        return resp.json();
+        console.log(resp);
+        return console.log(resp.json());
       } else {
         throw new Error("Errore nel rieprimento dei dati");
       }
     })
-    .then((songs) => {})
+    .then((searchObj) => {
+      updateInfos();
+      addInfos();
+    })
     .catch((err) => console.log(err));
 };
+
+function updateInfos(searchObj) {
+  const input = document.getElementById("cerca-canzone").value;
+}
+
+function addInfos(searchObj) {}
+
+window.addEventListener("DOMContentLoaded", fetchSearchSong);

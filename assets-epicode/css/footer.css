@@ -11,5 +11,141 @@
   max-width: 80px;
 }
 #rightBar {
-  max-height: 70vh;
+  max-height: 100vh;
+}
+#cerca-canzone {
+  background-color: rgb(42, 42, 42);
+
+  border-radius: 50px;
+  border: 1px solid grey;
+}
+.container {
+  margin-bottom: 50px;
+}
+.card {
+  width: 100%;
+}
+.n1 {
+  background-color: fuchsia;
+  margin: 0;
+  width: 100%;
+  height: 130px;
+}
+.n1 img {
+  rotate: 25deg;
+  translate: 60px 10px;
+}
+.n2 {
+  background-color: rgb(0, 255, 47);
+  margin: 0;
+  width: 100%;
+  height: 130px;
+}
+.n2 img {
+  rotate: 25deg;
+  translate: 60px 10px;
+}
+.n3 {
+  background-color: rgb(137, 27, 137);
+  margin: 0;
+  width: 100%;
+
+  height: 130px;
+}
+.n3 img {
+  rotate: 25deg;
+  translate: 60px 10px;
+}
+.n4 {
+  background-color: rgb(0, 13, 255);
+  margin: 0;
+  width: 100%;
+  height: 130px;
+}
+.n4 img {
+  rotate: 25deg;
+  translate: 60px 10px;
+}
+.n5 {
+  background-color: rgb(255, 0, 76);
+  margin: 0;
+  width: 100%;
+  height: 130px;
+}
+.n5 img {
+  rotate: 25deg;
+
+  translate: 60px 10px;
+}
+.n6 {
+  background-color: rgb(39, 161, 5);
+  margin: 0;
+  width: 100%;
+  height: 130px;
+}
+.n6 img {
+  rotate: 25deg;
+  translate: 60px 10px;
+}
+.n7 {
+  background-color: rgb(109, 39, 109);
+  margin: 0;
+  width: 100%;
+  height: 130px;
+}
+.n7 img {
+  rotate: 25deg;
+
+  translate: 60px 10px;
+}
+.n8 {
+  background-color: rgb(7, 153, 68);
+  margin: 0;
+  width: 100%;
+  height: 130px;
+}
+.n8 img {
+  rotate: 25deg;
+  translate: 60px 10px;
+}
+.n9 {
+  background-color: rgb(55, 193, 238);
+  margin: 0;
+  width: 100%;
+  height: 130px;
+}
+.n9 img {
+  rotate: 25deg;
+
+  translate: 60px 10px;
+}
+.n10 {
+  background-color: rgb(0, 38, 255);
+  margin: 0;
+  width: 100%;
+  height: 130px;
+}
+.n10 img {
+  rotate: 25deg;
+  translate: 60px 10px;
+}
+.n11 {
+  background-color: rgb(0, 255, 72);
+  margin: 0;
+  width: 100%;
+  height: 130px;
+}
+.n11 img {
+  rotate: 25deg;
+  translate: 60px 10px;
+}
+.n12 {
+  background-color: rgb(255, 149, 0);
+  margin: 0;
+  width: 100%;
+  height: 130px;
+}
+.n12 img {
+  rotate: 25deg;
+  translate: 60px 10px;
 }
