@@ -16,19 +16,20 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+
     <link rel="stylesheet" href="./assets-epicode/css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <link rel="stylesheet" href="./album-page.css" />
+    <link rel="stylesheet" href="./assets-epicode/css/album-page.css" />
   </head>
   <body class="bg-black m-3">
     <div class="container-fluid overflow-hidden">
       <div class="row gx-2" id="container">
         <div class="col-2 d-flex flex-column">
           <!-- sidebar sinistra -->
-          <div class="p-3 bg-dark rounded">
+          <div class="p-3 bg-spotify rounded">
             <!-- <i class="bi bi-spotify text-white fs-3"><span class="px-1">Spotify</span></i> -->
             <svg
               viewBox="0 0 1134 340"
@@ -44,14 +45,14 @@
             </svg>
             <nav>
               <ul class="list-group">
-                <li class="list-group-item bg-dark border border-0 p-0 py-2">
+                <li class="list-group-item bg-spotify border border-0 p-0 py-2">
                   <a href="./homepage.html" class="text-decoration-none"
                     ><i class="bi bi-house-door text-white pe-2 fs-3"></i
                     ><span class="text-white ps-2">Home</span></a
                   >
                 </li>
-                <li class="list-group-item bg-dark border border-0 p-0 py-2">
-                  <a href="./footer.html" class="text-decoration-none"
+                <li class="list-group-item bg-spotify border border-0 p-0 py-2">
+                  <a href="#" class="text-decoration-none"
                     ><i class="bi bi-search text-white pe-2 fs-3"></i
                     ><span class="text-white ps-2">Cerca</span></a
                   >
@@ -59,9 +60,9 @@
               </ul>
             </nav>
           </div>
-          <div class="bg-dark rounded mt-2 p-3" style="height: 100vh">
+          <div class="bg-spotify rounded mt-2 p-3" style="height: 100vh">
             <div
-              class="pt-2 text-white bg-dark rounded d-flex align-items-center"
+              class="pt-2 text-white bg-spotify rounded d-flex align-items-center"
             >
               <div class="d-flex align-items-center">
                 <svg
@@ -92,7 +93,7 @@
               </button>
             </div>
             <div
-              class="pt-2 mt-3 text-white bg-dark rounded d-flex align-items-center justify-content-between"
+              class="pt-2 mt-3 text-white bg-spotify rounded d-flex align-items-center justify-content-between"
             >
               <i class="bi bi-search"></i>
               <div class="d-flex align-items-center">
@@ -161,25 +162,6 @@
               </div>
             </div>
             <!-- com'era prima -->
-            <div class="col-12 mt-2">
-              <div class="row gx-2">
-                <div class="col-2">
-                  <img
-                    src="./assets-epicode/imgs/main/preferiti.png"
-                    alt=""
-                    width="100%"
-                    class="rounded"
-                  />
-                </div>
-                <div class="col-10 d-flex flex-column pt-1">
-                  <p class="text-white mb-0">Brani che ti piacciono</p>
-                  <div class="d-flex">
-                    <i class="bi bi-pin-angle-fill text-success pe-1"></i>
-                    <p class="text-white text-opacity-75">Playlist • Brani</p>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
         <div class="col-8" id="topBar">
@@ -237,6 +219,7 @@
                         alt="..."
                         width="30"
                         class="rounded-circle me-2"
+                        id="profileImg"
                       />
                       <p class="text-white mb-0 me-2" id="albumInfo">
                         Nome artista • anno • N Brani,
@@ -258,10 +241,10 @@
                   ></a>
                 </div>
 
-                <a href="#" class="text-white fs-3 px-3"
+                <a href="#" class="icon text-white fs-3 px-3"
                   ><i class="bi bi-heart"></i
                 ></a>
-                <a href="#" class="text-white fs-3 px-3"
+                <a href="#" class="icon text-white fs-3 px-3"
                   ><i class="bi bi-arrow-down-circle"></i
                 ></a>
 
@@ -275,7 +258,7 @@
                   >
                     . . .
                   </a>
-                  <ul class="dropdown-menu mt-2 bg-dark dropdown-menu-dark">
+                  <ul class="dropdown-menu mt-2 bg-spotify dropdown-menu-dark">
                     <li>
                       <a class="dropdown-item text-white" href="#"
                         >Aggiungi in coda</a
@@ -302,32 +285,16 @@
                 <div class="col-1"><i class="bi bi-clock"></i></div>
                 <hr />
 
-                <div class="col-1">
-                  <div class="bg-danger" id="number"><h5>1</h5></div>
-                </div>
-                <div class="col-7">
-                  <div class="bg-primary" id="titolo">
-                    <h5>titolo</h5>
-                    <p>artista</p>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="bg-success" id="riproduzioni">
-                    <h5>150.344</h5>
-                  </div>
-                </div>
-                <div class="col-1">
-                  <div class="bg-warning" id="tempo"><h5>tempo</h5></div>
-                </div>
+                <div id="tracks"></div>
               </div>
             </div>
           </section>
         </div>
         <div class="col-2 d-flex flex-column" id="rightBar">
           <!-- sidebar destra -->
-          <div class="bg-dark rounded p-3" style="height: 100vh">
+          <div class="bg-spotify rounded p-3" style="height: 100vh">
             <div
-              class="pt-2 text-white bg-dark rounded d-flex align-items-center justify-content-between"
+              class="pt-2 text-white bg-spotify rounded d-flex align-items-center justify-content-between"
             >
               <p class="m-0 ps-1 text-white text-opacity-75">
                 <b>Attività amici</b>
@@ -404,12 +371,89 @@
         </div>
       </div>
     </div>
+    <footer class="container-fluid position-relative">
+      <div
+        class="row bg-black rounded text-white mt-2 px-4 position-fixed bottom-0 start-0 end-0"
+      >
+        <div class="col-3">
+          <div class="container-fluid d-flex flex-column p-0 mt-3">
+            <div class="d-flex column-gap-2">
+              <div>
+                <img
+                  src="./assets-epicode/imgs/main/preferiti.png"
+                  alt=""
+                  width="48"
+                  class="rounded"
+                />
+              </div>
+              <div class="d-flex flex-column">
+                <p class="text-white mb-0 text-truncate overflow-x-hidden">
+                  Brani che ti piacciono
+                </p>
+                <p class="text-white text-opacity-75">
+                  <i class="bi bi-pin-angle-fill text-success pe-1"></i>Playlist
+                  • Brani
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="row">
+            <div
+              class="col d-flex justify-content-center align-items-center column-gap-3"
+            >
+              <a href="#" class="link-opacity-50-hover text-decoration-none"
+                ><i class="text-light bi bi-shuffle"></i
+              ></a>
+              <a href="#" class="link-opacity-50-hover text-decoration-none"
+                ><i class="text-light bi bi-skip-start-fill"></i
+              ></a>
+              <a href="#" class="link-opacity-10-hover text-decoration-none"
+                ><i class="text-light bi bi-play-circle-fill fs-2"></i
+              ></a>
+              <a href="#" class="link-opacity-50-hover text-decoration-none"
+                ><i class="text-light bi bi-skip-end-fill"></i
+              ></a>
+              <a href="#" class="link-opacity-50-hover text-decoration-none"
+                ><i class="text-light bi bi-repeat"></i
+              ></a>
+            </div>
+          </div>
+          <div class="row g-4">
+            <div class="col-1">
+              <span class="fs-6 fw-lighter text-body-light">00:00</span>
+            </div>
+            <div class="col-10 d-flex justify-content-center">
+              <input type="range" id="track-range" class="form-range" />
+            </div>
+            <div class="col-1">
+              <span class="fs-6 fw-lighter text-body-light">00:00</span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-3 d-flex justify-content-center align-items-center column-gap-2"
+        >
+          <i class="bi bi-file-play"></i>
+          <i class="bi bi-mic"></i>
+          <i class="bi bi-list"></i>
+          <i class="bi bi-boombox"></i>
+          <div class="d-flex align-items-center gap-2">
+            <label for="range-volume"> <i class="bi bi-volume-up"></i></label>
+            <input type="range" id="range-volume" class="form-range" />
+          </div>
+          <i class="bi bi-pip"></i>
+          <i class="bi bi-arrows-angle-expand"></i>
+        </div>
+      </div>
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
     <script src="./script.js"></script>
-    <script src="./test.js"></script>
+    <script src="./album-page.js"></script>
   </body>
 </html>

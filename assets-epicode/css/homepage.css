@@ -71,3 +71,7 @@
 #topBar {
   transition: width 0.3s ease;
 }
+
+.bg-spotify {
+  background-color: #121212;
+}

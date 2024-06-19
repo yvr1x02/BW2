@@ -1,4 +1,5 @@
-const apiUrl = "https://striveschool-api.herokuapp.com/api/deezer/album/75621062";
+const apiUrl =
+  "https://striveschool-api.herokuapp.com/api/deezer/album/75621062";
 
 function fetchAndDisplayAlbumInfo() {
   fetch(apiUrl)
@@ -26,7 +27,9 @@ function updateAlbumInfo(albumData) {
     "albumInfo"
   ).textContent = `${albumData.artist.name} • ${albumData.release_date} • ${albumData.nb_tracks} Brani`;
 
-  document.getElementById("albumDuration").textContent = `${formatDuration(albumData.duration)}`;
+  document.getElementById("albumDuration").textContent = `${formatDuration(
+    albumData.duration
+  )}`;
 }
 
 //funzione per aggiungere numero, canzone, riproduzioni, tempo
