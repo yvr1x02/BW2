@@ -75,7 +75,7 @@
               <button type="button" class="btn btn-secondary rounded-pill fs-6">Playlist</button>
               <button type="button" class="btn btn-secondary rounded-pill fs-6">Artisti</button>
             </div>
-            <div class="container overflow-y-auto mt-2" style="max-height: 55vh">
+            <div class="container overflow-y-scroll mt-2" style="max-height: 80%">
               <div class="pt-2 text-white bg-dark rounded d-flex align-items-center justify-content-between">
                 <i class="bi bi-search"></i>
                 <div class="d-flex align-items-center">
@@ -193,8 +193,8 @@
         </div>
         <!-- SEZIONE CENTRALE -->
         <div class="col-8" id="topBar">
-          <div class="container bg-dark rounded overflow-y-auto mb-5" style="max-height: 96vh">
-            <div class="p-3 bg-dark d-flex text-white justify-content-between rounded">
+          <div class="container bg-dark rounded overflow-y-auto mb-5 position-relative" style="max-height: 100%">
+            <div class="contain-hearder p-3 bg-dark d-flex text-white justify-content-between rounded z-3">
               <div class="d-flex gap-4">
                 <a href="#" class="text-decoration-none"><i class="bi bi-caret-left text-white"></i></a>
                 <a href="#" class="text-decoration-none"><i class="bi bi-caret-right text-white"></i></a>
@@ -257,8 +257,6 @@
                   <p class="card-text text-white text-opacity-50">Nome Artista, Album</p>
                 </div>
               </div>
-              <!-- Aggiungi altre card qui -->
-              <!-- ARTISTI -->
             </div>
             <!-- SFOGLIA TUTTO -->
             <p class="text-white fs-3 mx-3 mt-3">Sforglia tutto</p>
@@ -461,7 +459,7 @@
               <span class="fs-6 fw-lighter text-body-light">00:00</span>
             </div>
             <div class="col-10 d-flex justify-content-center">
-              <input type="range" id="track-range" class="form-range" />
+              <input type="range" id="track-range" />
             </div>
             <div class="col-1">
               <span class="fs-6 fw-lighter text-body-light">00:00</span>

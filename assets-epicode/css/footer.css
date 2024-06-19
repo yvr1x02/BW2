@@ -149,3 +149,9 @@
   rotate: 25deg;
   translate: 60px 10px;
 }
+.contain-hearder {
+  position: fixed;
+  top: 1rem;
+  left: 16.66666667%;
+  right: 16.66666667%;
+}
