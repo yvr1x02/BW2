@@ -1,0 +1,52 @@
+.albums:hover {
+  z-index: 1;
+  background-color: #212529;
+}
+
+.albums {
+  background-color: transparent;
+  width: 12rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 0.2rem;
+  border-radius: 2%;
+  cursor: pointer;
+}
+
+.play-icon {
+  position: absolute;
+  bottom: 6rem;
+  left: 85%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: #419f65; /* Sfondo verde */
+  color: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  opacity: 0; /* Nasconde l'icona inizialmente */
+  transition: opacity 0.3s ease; /* Effetto di transizione per l'opacità */
+}
+
+.albums:hover .play-icon {
+  opacity: 1;
+}
+
+#topBar {
+  transition: width 0.3s ease;
+}
+
+.bg-spotify {
+  background-color: #121212;
+}
+
+body {
+  font-family: "Circular";
+}
+
+.albumContainer {
+  gap: 1rem;
+}
