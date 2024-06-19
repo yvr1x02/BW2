@@ -19,6 +19,28 @@
   color: green;
 }
 
-.trackElement:hover {
+.track-element:hover {
   background-color: rgb(53, 53, 53);
+}
+
+.icon-text {
+  display: none;
+  font-size: 1.7em;
+}
+.number-text {
+  display: inline;
+}
+.track-element:hover .number-text {
+  display: none;
+}
+.track-element:hover .icon-text {
+  display: inline;
+}
+
+.track-element .col-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-top: 0.5em;
 }
