@@ -23,9 +23,9 @@
   </head>
   <body class="bg-black m-3">
     <div class="container-fluid overflow-hidden">
-      <div class="row gx-2">
+      <div class="row gx-2" id="container">
         <!-- sidebar sinistra dalla navbar in giu -->
-        <div class="sideBar col-3 d-flex flex-column align-items-strech">
+        <div class="sideBar col-2 d-flex flex-column align-items-strech">
           <div class="p-3 bg-dark rounded">
             <svg
               viewBox="0 0 1134 340"
@@ -57,7 +57,7 @@
           </div>
           <!-- sidebar sinistra -->
           <div class="sideBar-library bg-dark rounded mt-2 p-3 mb-4 overflow-y-auto">
-            <div class="pt-2 text-white bg-dark rounded d-flex align-items-center">
+            <div class="pt-2 text-white bg-dark rounded d-flex align-items-center justify-content-between">
               <div class="d-flex align-items-center">
                 <svg
                   data-encore-id="icon"
@@ -195,7 +195,7 @@
           </div>
         </div>
         <!-- sezione centrale -->
-        <div class="col-7" id="topBar">
+        <div class="col-8" id="topBar">
           <div class="p-3 bg-dark d-flex text-white justify-content-between rounded">
             <div class="d-flex gap-4">
               <a href="#" class="text-decoration-none"><i class="bi bi-caret-left text-white"></i></a>
@@ -268,7 +268,7 @@
     </div>
     <!-- footer -->
     <footer class="container-fluid position-relative">
-      <div class="row bg-dark rounded text-white mt-2 px-4 position-fixed bottom-0 start-0 end-0">
+      <div class="row bg-black rounded text-white mt-2 px-4 position-fixed bottom-0 start-0 end-0">
         <div class="col-3">
           <div class="container-fluid d-flex flex-column p-0 mt-3">
             <div class="d-flex column-gap-2">
@@ -287,11 +287,19 @@
         <div class="col-6">
           <div class="row">
             <div class="col d-flex justify-content-center align-items-center column-gap-3">
-              <i class="bi bi-shuffle"></i>
-              <i class="bi bi-skip-start-fill"></i>
-              <i class="bi bi-play-circle-fill fs-2"></i>
-              <i class="bi bi-skip-end-fill"></i>
-              <i class="bi bi-repeat"></i>
+              <a href="#" class="link-opacity-50-hover text-decoration-none"
+                ><i class="text-light bi bi-shuffle"></i
+              ></a>
+              <a href="#" class="link-opacity-50-hover text-decoration-none"
+                ><i class="text-light bi bi-skip-start-fill"></i
+              ></a>
+              <a href="#" class="link-opacity-10-hover text-decoration-none"
+                ><i class="text-light bi bi-play-circle-fill fs-2"></i
+              ></a>
+              <a href="#" class="link-opacity-50-hover text-decoration-none"
+                ><i class="text-light bi bi-skip-end-fill"></i
+              ></a>
+              <a href="#" class="link-opacity-50-hover text-decoration-none"><i class="text-light bi bi-repeat"></i></a>
             </div>
           </div>
           <div class="row g-4">
