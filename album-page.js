@@ -17,10 +17,11 @@ function fetchAndDisplayAlbumInfo() {
     });
 }
 
-// funzione per aggiornare l'album data
+// funzione per aggiornare l'album data(header)
 function updateAlbumInfo(albumData) {
   document.getElementById("albumTitle").textContent = albumData.title;
   document.getElementById("albumImage").src = albumData.cover_medium;
+  document.getElementById("profileImg").src = albumData.cover;
   document.getElementById(
     "albumInfo"
   ).textContent = `${albumData.artist.name} • ${albumData.release_date} • ${albumData.nb_tracks} Brani`;
@@ -28,12 +29,17 @@ function updateAlbumInfo(albumData) {
   document.getElementById("albumDuration").textContent = `${formatDuration(albumData.duration)}`;
 }
 
+//funzione per aggiungere numero, canzone, riproduzioni, tempo
+
 function addAlbumInfo(albumData) {
   const tracksContainer = document.getElementById("tracks");
 
   albumData.tracks.data.forEach((track, index) => {
     const trackElement = document.createElement("div");
     trackElement.classList.add("row");
+    trackElement.classList.add("trackElement");
+
+    //creo numero canzone
     const numberDiv = document.createElement("div");
     numberDiv.classList.add("col-1");
     const numberContent = document.createElement("div");
@@ -42,17 +48,25 @@ function addAlbumInfo(albumData) {
     numberContent.appendChild(numberText);
     numberDiv.appendChild(numberContent);
     trackElement.appendChild(numberDiv);
+
+    //creo titolo canzone
+
     const titleDiv = document.createElement("div");
     titleDiv.classList.add("col-7");
     const titleContent = document.createElement("div");
     const titleText = document.createElement("h5");
     titleText.textContent = track.title;
+
+    // creo nome artista
+
     const artistText = document.createElement("p");
     artistText.textContent = track.artist.name;
     titleContent.appendChild(titleText);
     titleContent.appendChild(artistText);
     titleDiv.appendChild(titleContent);
     trackElement.appendChild(titleDiv);
+
+    //creo riprosuzioni
 
     const playsDiv = document.createElement("div");
     playsDiv.classList.add("col-3");
@@ -62,6 +76,9 @@ function addAlbumInfo(albumData) {
     playsContent.appendChild(playsText);
     playsDiv.appendChild(playsContent);
     trackElement.appendChild(playsDiv);
+
+    //creo tempo canzone
+
     const durationDiv = document.createElement("div");
     durationDiv.classList.add("col-1");
     const durationContent = document.createElement("div");
@@ -74,6 +91,8 @@ function addAlbumInfo(albumData) {
     tracksContainer.appendChild(trackElement);
   });
 }
+
+//funzione per formattare durata canzone(adesso funziona)
 
 function formatDuration(duration) {
   const minutes = Math.floor(duration / 60);

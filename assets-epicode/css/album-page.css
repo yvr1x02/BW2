@@ -18,3 +18,7 @@
 .icon:hover i {
   color: green;
 }
+
+.trackElement:hover {
+  background-color: rgb(53, 53, 53);
+}
