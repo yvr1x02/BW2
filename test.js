@@ -34,21 +34,17 @@ function addAlbumInfo(albumData) {
   albumData.tracks.data.forEach((track, index) => {
     const trackElement = document.createElement("div");
     trackElement.classList.add("row");
-
     const numberDiv = document.createElement("div");
     numberDiv.classList.add("col-1");
     const numberContent = document.createElement("div");
-    numberContent.classList.add("bg-danger");
     const numberText = document.createElement("h5");
     numberText.textContent = index + 1;
     numberContent.appendChild(numberText);
     numberDiv.appendChild(numberContent);
     trackElement.appendChild(numberDiv);
-
     const titleDiv = document.createElement("div");
     titleDiv.classList.add("col-7");
     const titleContent = document.createElement("div");
-    titleContent.classList.add("bg-primary");
     const titleText = document.createElement("h5");
     titleText.textContent = track.title;
     const artistText = document.createElement("p");
@@ -61,17 +57,14 @@ function addAlbumInfo(albumData) {
     const playsDiv = document.createElement("div");
     playsDiv.classList.add("col-3");
     const playsContent = document.createElement("div");
-    playsContent.classList.add("bg-success");
     const playsText = document.createElement("h5");
     playsText.textContent = track.rank.toLocaleString();
     playsContent.appendChild(playsText);
     playsDiv.appendChild(playsContent);
     trackElement.appendChild(playsDiv);
-
     const durationDiv = document.createElement("div");
     durationDiv.classList.add("col-1");
     const durationContent = document.createElement("div");
-    durationContent.classList.add("bg-warning");
     const durationText = document.createElement("h5");
     durationText.textContent = formatDuration(track.duration);
     durationContent.appendChild(durationText);
