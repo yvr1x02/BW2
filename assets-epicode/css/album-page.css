@@ -9,3 +9,12 @@
 #albumImage:hover {
   transform: scale(1.1);
 }
+
+.icon {
+  color: white;
+  transition: color 0.3s;
+}
+
+.icon:hover i {
+  color: green;
+}
