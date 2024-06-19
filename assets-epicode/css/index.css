@@ -1,8 +1,0 @@
-.card:hover {
-  z-index: 1;
-  background-color: #212529;
-}
-
-.card {
-  background-color: transparent;
-}

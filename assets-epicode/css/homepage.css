@@ -1,0 +1,70 @@
+.card:hover {
+  z-index: 1;
+  background-color: #212529;
+}
+
+.card {
+  background-color: transparent;
+}
+
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  margin: 10px;
+  max-width: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-overlay {
+  position: relative;
+}
+
+.play-icon {
+  position: absolute;
+  bottom: 10px;
+  left: 85%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: #419f65; /* Sfondo verde */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  opacity: 0; /* Nasconde l'icona inizialmente */
+  transition: opacity 0.3s ease; /* Effetto di transizione per l'opacità */
+}
+
+.card:hover .play-icon {
+  opacity: 1;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-opacity-50 {
+  opacity: 0.5;
+}
+
+.rounded-3 {
+  border-radius: 0.75rem;
+}
+
+.border-0 {
+  border: none;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
