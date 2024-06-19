@@ -13,9 +13,14 @@
     />
     <link rel="stylesheet" href="./assets-epicode/css/circular-font.css" />
     <link rel="stylesheet" href="./assets-epicode/css/footer.css" />
+    <link rel="stylesheet" href="./assets-epicode/css/homepage.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
   </head>
   <body class="bg-black m-3">
@@ -204,7 +209,7 @@
                   <i class="bi bi-patch-check-fill fs-4 text-primary"></i>
                   <p class="card-text mb-0 ms-2">verificato</p>
                 </div>
-                <h5 class="card-title ms-2">Yellowcard</h5>
+                <h5 class="card-title ms-2" id="title">Yellowcard</h5>
 
                 <p class="card-text mb-3 ms-1">
                   <small>3.433.158 ascoltatori mensili</small>
@@ -215,141 +220,87 @@
           <!-- BRANI DELL'ALBUM -->
           <div class="card border-0">
             <div class="card-body" id="middleCard">
-              <div class="d-flex align-items-center">
-                <a
-                  ><i
-                    class="bi bi-play-circle-fill display-4 mb-2"
-                    id="play"
-                  ></i
-                ></a>
-                <button type="button" class="btn btn-outline-light ms-4">
-                  Following
-                </button>
-                <button class="btn bg-trasparent">
-                  <p class="ms-4" id="dots">
-                    <b>. . .</b>
-                  </p>
-                </button>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center">
+                  <a
+                    ><i
+                      class="bi bi-play-circle-fill display-4 mb-2"
+                      id="play"
+                    ></i
+                  ></a>
+                  <a>
+                    <i class="bi bi-plus-circle text-secondary fs-2 ms-4"></i
+                  ></a>
+                  <button class="btn bg-trasparent">
+                    <p class="ms-4 mt-1" id="dots">
+                      <b>. . .</b>
+                    </p>
+                  </button>
+                </div>
+                <div class="d-flex">
+                  <p class="text-secondary m-0 mt-1 me-1">elenco</p>
+                  <i class="bi bi-list-ul text-secondary fs-4"></i>
+                </div>
+              </div>
+              <div
+                class="text-secondary d-flex justify-content-between mt-3 me-4 ms-4 border-bottom border-dark"
+              >
+                <div>
+                  <p># <span class="ms-4"> Titolo</span></p>
+                </div>
+                <div>
+                  <i class="bi bi-clock"></i>
+                </div>
               </div>
 
-              <div class="row gap-3">
-                <div class="col-7 card-text text-white fs-5">
-                  <p class="border-bottom border-black">
-                    <b>Popolari</b>
-                  </p>
-                  <div
-                    class="row text-center d-flex align-items-center"
-                    id="song"
-                  >
-                    <div class="ms-3 col-1 fs-6">
-                      <p class="text-truncate">1</p>
-                    </div>
-                    <div class="col-2 fs-6 p-1">
-                      <img
-                        src="./assets-epicode/imgs/main/image-1.jpg"
-                        alt=""
-                        style="width: 60%"
-                      />
-                    </div>
-                    <div class="col-2 fs-6">
-                      <p>pippo</p>
-                    </div>
-                    <div class="col-3 fs-6">
-                      <p>233.453.532.2</p>
-                    </div>
-                    <div class="col-3 fs-6">
-                      <p>2:45</p>
-                    </div>
-                  </div>
-                  <div
-                    class="row text-center d-flex align-items-center mt-2"
-                    id="song"
-                  >
-                    <div class="ms-3 col-1 fs-6">
-                      <p>1</p>
-                    </div>
-                    <div class="col-2 fs-6 p-1">
-                      <img
-                        src="./assets-epicode/imgs/main/image-1.jpg"
-                        alt=""
-                        style="width: 60%"
-                      />
-                    </div>
-                    <div class="col-2 fs-6">
-                      <p>pippo</p>
-                    </div>
-                    <div class="col-3 fs-6">
-                      <p>233.453.532.2</p>
-                    </div>
-                    <div class="col-3 fs-6">
-                      <p>2:45</p>
-                    </div>
-                  </div>
-                  <div
-                    class="row text-center d-flex align-items-center mt-2"
-                    id="song"
-                  >
-                    <div class="ms-3 col-1 fs-6">
-                      <p>1</p>
-                    </div>
-                    <div class="col-2 fs-6 p-1">
-                      <img
-                        src="./assets-epicode/imgs/main/image-1.jpg"
-                        alt=""
-                        style="width: 60%"
-                      />
-                    </div>
-                    <div class="col-2 fs-6">
-                      <p>pippo</p>
-                    </div>
-                    <div class="col-3 fs-6">
-                      <p>233.453.532.2</p>
-                    </div>
-                    <div class="col-3 fs-6">
-                      <p>2:45</p>
-                    </div>
-                  </div>
-                  <div
-                    class="row text-center d-flex align-items-center mt-2"
-                    id="song"
-                  >
-                    <div class="ms-3 col-1 fs-6">
-                      <p>1</p>
-                    </div>
-                    <div class="col-2 fs-6 p-1">
-                      <img
-                        src="./assets-epicode/imgs/main/image-1.jpg"
-                        alt=""
-                        style="width: 60%"
-                      />
-                    </div>
-                    <div class="col-2 fs-6">
-                      <p>pippo</p>
-                    </div>
-                    <div class="col-3 fs-6">
-                      <p>233.453.532.2</p>
-                    </div>
-                    <div class="col-3 fs-6">
-                      <p>2:45</p>
-                    </div>
+              <div
+                class="text-secondary d-flex justify-content-between mt-3 me-4 ms-4"
+              >
+                <div class="d-flex">
+                  <p class="pe-4 pt-2">1</p>
+                  <div class="ps-2 text-white">
+                    <p class="m-0"><b>pippo</b></p>
+                    <p class="text-secondary">pippo</p>
                   </div>
                 </div>
-                <div class="col-4 card-text text-white fs-5">
-                  <p class="border-bottom border-black">
-                    <b>Brani che ti piacciono</b>
-                  </p>
-                  <div class="d-flex align-items-center">
-                    <img
-                      src="./assets-epicode/imgs/main/image-13.jpg"
-                      alt=""
-                      style="width: 25%"
-                      class="rounded-circle"
-                    />
+                <div>
+                  <p class="pt-2">2:45</p>
+                </div>
+              </div>
+              <div
+                class="text-secondary d-flex justify-content-between me-4 ms-4"
+              >
+                <div class="d-flex">
+                  <p class="pe-4 pt-2">1</p>
+                  <div class="ps-2 text-white">
+                    <p class="m-0"><b>pippo</b></p>
+                    <p class="text-secondary">pippo</p>
+                  </div>
+                </div>
+                <div>
+                  <p class="pt-2">2:45</p>
+                </div>
+              </div>
+              <div>
+                <p class="ms-4 mt-2 fs-3 text-white"><b>Altro di Pippo </b></p>
+              </div>
+              <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                  <div class="card album">
                     <div>
-                      <p class="fs-6 m-0 ms-3 mb-1">
-                        <b>hai messo mi piace a 12 brani</b>
-                      </p>
-                      <p class="fs-6 m-0 ms-3">Di Yellowcard</p>
+                      <img
+                        src="./assets-epicode/imgs/main/image-12.jpg"
+                        class="card-img-top"
+                        alt="..."
+                        id="album"
+                      />
+                      <div class="play-icon">
+                        <i class="fas fa-play"></i>
+                      </div>
+                    </div>
+                    <div class="card-body p-1 pt-3">
+                      <h5 class="card-title text-white">Card title</h5>
+                      <p class="card-text text-secondary">descrizione</p>
                     </div>
                   </div>
                 </div>
@@ -439,7 +390,7 @@
       </div>
     </div>
     <!-- FOOTER -->
-    <footer class="container-fluid position-relative">
+    <footer class="container-fluid position-relative z-3">
       <div
         class="row bg-black rounded text-white mt-2 px-4 position-fixed bottom-0 start-0 end-0"
       >

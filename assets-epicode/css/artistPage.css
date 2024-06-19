@@ -4,7 +4,7 @@
 .card-text {
   font-size: 0.8rem;
 }
-.card-title {
+#title {
   font-weight: 900;
   font-size: 6rem;
 }
@@ -51,32 +51,4 @@
 
 .bg-spotify {
   background-color: #121212;
-}
-
-@media (min-width: 576px) {
-  .card-title {
-    font-size: 2.5rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .card-title {
-    font-size: 4.75rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .card-title {
-    font-size: 6rem;
-  }
-}
-
-@media (min-width: 1300px) {
-  .card-title {
-    font-size: 8.25rem;
-  }
-}
-
-body {
-  font-family: "Circular";
 }
