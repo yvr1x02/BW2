@@ -1,0 +1,24 @@
+#play {
+  color: rgb(65, 160, 101);
+  cursor: pointer;
+}
+#play:hover {
+  color: rgb(89, 226, 142);
+}
+
+#albumImage:hover {
+  transform: scale(1.1);
+}
+
+.icon {
+  color: white;
+  transition: color 0.3s;
+}
+
+.icon:hover i {
+  color: green;
+}
+
+.trackElement:hover {
+  background-color: rgb(53, 53, 53);
+}
