@@ -1,4 +1,5 @@
 const apiUrl = "https://striveschool-api.herokuapp.com/api/deezer/album/75621062";
+const API_KEY = "93161db213msh9b5055b449952d4p12b564jsna6015938db0f";
 
 function fetchAndDisplayAlbumInfo() {
   fetch(apiUrl)
@@ -44,6 +45,7 @@ function addAlbumInfo(albumData) {
 
     const numberContent = document.createElement("div");
     const numberText = document.createElement("h5");
+    numberText.classList.add("mx-1");
 
     //effetto hover + incremento numero per canzone
 
