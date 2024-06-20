@@ -1,3 +1,7 @@
+#topBar {
+  transition: width 0.3s ease;
+}
+
 #play {
   color: rgb(65, 160, 101);
   cursor: pointer;
@@ -19,16 +23,63 @@
   color: green;
 }
 
-.trackElement:hover {
+.track-element:hover {
   background-color: rgb(53, 53, 53);
 }
-#topBar {
-  transition: width 0.3s ease;
+
+.icon-text {
+  display: none;
+  font-size: 1.7em;
+}
+.number-text {
+  display: inline;
+}
+.track-element:hover .number-text {
+  display: none;
+}
+.track-element:hover .icon-text {
+  display: inline;
+}
+
+.track-element .col-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-top: 0.5em;
 }
 .bg-spotify {
   background-color: #121212;
 }
+#leftScrool,
+#topBar,
+#rightScrool {
+  height: 93vh; /* Ensure all containers have the same height */
+  overflow-y: auto; /* Enable vertical scrolling within the containers */
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #474747;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #474747;
+}
 
 body {
-  font-family: "Circular";
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* Prevent the entire page from scrolling */
 }

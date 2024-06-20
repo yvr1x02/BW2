@@ -1,5 +1,4 @@
-const apiUrl =
-  "https://striveschool-api.herokuapp.com/api/deezer/album/75621062";
+const apiUrl = "https://striveschool-api.herokuapp.com/api/deezer/album/75621062";
 
 function fetchAndDisplayAlbumInfo() {
   fetch(apiUrl)
@@ -27,9 +26,7 @@ function updateAlbumInfo(albumData) {
     "albumInfo"
   ).textContent = `${albumData.artist.name} • ${albumData.release_date} • ${albumData.nb_tracks} Brani`;
 
-  document.getElementById("albumDuration").textContent = `${formatDuration(
-    albumData.duration
-  )}`;
+  document.getElementById("albumDuration").textContent = `${formatDuration(albumData.duration)}`;
 }
 
 //funzione per aggiungere numero, canzone, riproduzioni, tempo
@@ -39,21 +36,31 @@ function addAlbumInfo(albumData) {
 
   albumData.tracks.data.forEach((track, index) => {
     const trackElement = document.createElement("div");
-    trackElement.classList.add("row");
-    trackElement.classList.add("trackElement");
+    trackElement.classList.add("row", "track-element");
 
-    //creo numero canzone
+    // creo numero canzone
     const numberDiv = document.createElement("div");
     numberDiv.classList.add("col-1");
+
     const numberContent = document.createElement("div");
     const numberText = document.createElement("h5");
-    numberText.textContent = index + 1;
+
+    //effetto hover + incremento numero per canzone
+
+    const numberSpan = document.createElement("span");
+    numberSpan.textContent = index + 1;
+    numberSpan.classList.add("number-text");
+
+    const iconSpan = document.createElement("i");
+    iconSpan.classList.add("bi", "bi-play-fill", "icon-text");
+
+    numberText.appendChild(numberSpan);
+    numberText.appendChild(iconSpan);
     numberContent.appendChild(numberText);
     numberDiv.appendChild(numberContent);
     trackElement.appendChild(numberDiv);
 
-    //creo titolo canzone
-
+    // creo titolo canzone
     const titleDiv = document.createElement("div");
     titleDiv.classList.add("col-7");
     const titleContent = document.createElement("div");
@@ -69,8 +76,7 @@ function addAlbumInfo(albumData) {
     titleDiv.appendChild(titleContent);
     trackElement.appendChild(titleDiv);
 
-    //creo riprosuzioni
-
+    // creo riproduzioni
     const playsDiv = document.createElement("div");
     playsDiv.classList.add("col-3");
     const playsContent = document.createElement("div");
@@ -80,8 +86,7 @@ function addAlbumInfo(albumData) {
     playsDiv.appendChild(playsContent);
     trackElement.appendChild(playsDiv);
 
-    //creo tempo canzone
-
+    // creo tempo canzone
     const durationDiv = document.createElement("div");
     durationDiv.classList.add("col-1");
     const durationContent = document.createElement("div");

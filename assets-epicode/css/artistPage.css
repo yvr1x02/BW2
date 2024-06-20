@@ -4,7 +4,7 @@
 .card-text {
   font-size: 0.8rem;
 }
-.card-title {
+#title {
   font-weight: 900;
   font-size: 6rem;
 }
@@ -53,30 +53,35 @@
   background-color: #121212;
 }
 
-@media (min-width: 576px) {
-  .card-title {
-    font-size: 2.5rem;
-  }
+#leftScrool,
+#topBar,
+#rightScrool {
+  height: 93vh; /* Ensure all containers have the same height */
+  overflow-y: auto; /* Enable vertical scrolling within the containers */
 }
 
-@media (min-width: 768px) {
-  .card-title {
-    font-size: 4.75rem;
-  }
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-@media (min-width: 992px) {
-  .card-title {
-    font-size: 6rem;
-  }
+/* Track */
+::-webkit-scrollbar-track {
+  background: #121212;
 }
 
-@media (min-width: 1300px) {
-  .card-title {
-    font-size: 8.25rem;
-  }
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #474747;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #474747;
 }
 
 body {
-  font-family: "Circular";
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* Prevent the entire page from scrolling */
 }
