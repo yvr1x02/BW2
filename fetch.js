@@ -5,7 +5,7 @@ const fetchSearchSong = () => {
     .then((resp) => {
       if (resp.ok) {
         console.log(resp);
-        return console.log(resp.json());
+        return resp.json();
       } else {
         throw new Error("Errore nel rieprimento dei dati");
       }
