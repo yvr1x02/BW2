@@ -36,15 +36,7 @@ input[type="range"]::-moz-range-thumb {
 #range-volume {
   max-width: 80px;
 }
-#rightBar {
-  max-height: 100vh;
-}
-#cerca-canzone {
-  background-color: rgb(42, 42, 42);
 
-  border-radius: 50px;
-  border: 1px solid grey;
-}
 .container {
   margin-bottom: 50px;
 }
@@ -175,9 +167,72 @@ input[type="range"]::-moz-range-thumb {
   rotate: 25deg;
   translate: 60px 10px;
 }
-.contain-hearder {
-  position: fixed;
-  top: 1rem;
-  left: 16.66666667%;
-  right: 16.66666667%;
+
+#leftScrool,
+#rightScrool {
+  height: 100vh; /* Ensure all containers have the same height */
+  overflow-y: auto; /* Enable vertical scrolling within the containers */
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #474747;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #474747;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* Prevent the entire page from scrolling */
+}
+
+#cerca-canzone {
+  background-color: rgb(42, 42, 42);
+
+  /* border-radius: 50px; /
+  / border: 1px solid grey; */
+  padding: 10px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  background-color: #282828;
+  color: white;
+  border: 1px solid #282828;
+}
+#cerca-canzone::placeholder {
+  color: #b3b3b3;
+  padding-left: 12px;
+  margin-left: 5px;
+}
+#cerca-canzone:focus {
+  background-color: #404040;
+  border: 1px solid whitesmoke;
+}
+#cerca-canzone:hover {
+  background-color: #393939;
+  border: 1px solid white;
+}
+.search-container .bi {
+  position: absolute;
+  top: 8px;
+  left: 7px;
+}
+
+#topBar {
+  height: 100hv;
 }
