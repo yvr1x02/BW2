@@ -13,3 +13,36 @@ body {
 .singoliContainer {
   gap: 1rem;
 }
+
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+#leftScrool,
+#topBar,
+#rightScroll {
+  height: 90vh;
+  overflow-y: auto;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #474747;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #474747;
+}
