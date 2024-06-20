@@ -52,3 +52,36 @@
 .bg-spotify {
   background-color: #121212;
 }
+
+#leftScrool,
+#topBar,
+#rightScrool {
+  height: 93vh; /* Ensure all containers have the same height */
+  overflow-y: auto; /* Enable vertical scrolling within the containers */
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #474747;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #474747;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* Prevent the entire page from scrolling */
+}
