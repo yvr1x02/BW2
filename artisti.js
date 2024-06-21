@@ -1,10 +1,18 @@
 const cardContainer = document.getElementById("artistContainer");
-const rapidApiKey = "27fdeed2bemsh4674e94f841d323p13c465jsnf69f30e4be65"; // Sostituisci con la tua chiave API
 
-const searchQueries = ["eminem", "taylor swift", "drake", "rihanna", "coldplay", "gorillaz"]; // Aggiungi altri termini di ricerca
+// Funzione per generare un ID casuale tra 1 e 100
+const generateRandomId = () => {
+  return Math.round(Math.random() * 100);
+};
 
-const fetchArtist = (artist) => {
-  const url = `https://deezerdevs-deezer.p.rapidapi.com/search?q=${artist}`;
+// Genera un array di 5 ID casuali
+const searchQueries = [];
+for (let i = 0; i < 7; i++) {
+  searchQueries.push(generateRandomId());
+}
+
+const fetchArtist = (artistId) => {
+  const url = `https://deezerdevs-deezer.p.rapidapi.com/search?q=${artistId}`;
   const options = {
     method: "GET",
     headers: {
@@ -14,17 +22,25 @@ const fetchArtist = (artist) => {
   };
 
   fetch(url, options)
-    .then((response) => response.json())
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
     .then((data) => {
       console.log(data); // Log dettagliato della risposta
       if (data.data && data.data.length > 0) {
         const artist = data.data[0];
         createCard(artist);
       } else {
-        console.warn(`No artist found for query: ${artist}`);
+        console.warn(`No artist found for ID: ${artistId}`);
       }
     })
-    .catch((error) => console.error("Error:", error));
+    .catch((error) => {
+      console.error("Error:", error);
+      // Gestione degli errori più dettagliata qui, es. mostrare un messaggio di errore all'utente
+    });
 };
 
 const createCard = (artist) => {
@@ -45,23 +61,27 @@ const createCard = (artist) => {
   type.textContent = "Artista";
   type.classList.add("text-secondary", "p-1", "px-2", "mt-1");
 
-  const div = document.createElement("div");
+  // Creare il div del contenitore dell'icona
   const iconContainer = document.createElement("div");
   iconContainer.classList.add("play-icon");
+  iconContainer.id = "play-icon-artist";
+
+  // Creare l'icona di riproduzione e assegnare le classi
   const playIcon = document.createElement("i");
   playIcon.classList.add("fas", "fa-play");
 
+  // Aggiungere l'icona di riproduzione al contenitore dell'icona
+  iconContainer.appendChild(playIcon);
+
+  // Aggiungere l'icona di riproduzione al contenitore dell'icona
   card.appendChild(img);
   card.appendChild(name);
-  card.appendChild(type);
-  iconContainer.appendChild(playIcon);
-  div.appendChild(iconContainer);
-  card.appendChild(div);
+  card.appendChild(iconContainer);
 
   cardContainer.appendChild(card);
 };
 
-// Chiamate API per ogni artist di ricerca
-searchQueries.forEach((artist) => {
-  fetchArtist(artist);
+// Chiamate API per ogni ID casuale generato
+searchQueries.forEach((id) => {
+  fetchArtist(id);
 });
