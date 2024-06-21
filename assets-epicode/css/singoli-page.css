@@ -7,3 +7,155 @@
 #singoloImg {
   width: 20%;
 }
+#topBar {
+  transition: width 0.3s ease;
+}
+.card-text {
+  font-size: 0.8rem;
+}
+#title {
+  font-weight: 900;
+  font-size: 6rem;
+}
+#show {
+  cursor: pointer;
+}
+#middleCard {
+  background: rgb(18, 18, 18);
+  background: linear-gradient(
+    0deg,
+    rgba(18, 18, 18, 1) 48%,
+    rgba(41, 41, 41, 1) 100%
+  );
+}
+#song:hover {
+  background: rgb(68, 68, 68);
+}
+#play {
+  color: rgb(65, 160, 101);
+  cursor: pointer;
+}
+#play:hover {
+  color: rgb(89, 226, 142);
+}
+#dots {
+  color: grey;
+  text-decoration: none;
+}
+#dots:hover {
+  color: white;
+}
+#bell {
+  color: rgb(160, 160, 160);
+}
+#show {
+  color: rgb(160, 160, 160);
+}
+#bell:hover {
+  color: white;
+}
+#show:hover {
+  color: white;
+}
+
+.bg-spotify {
+  background-color: #121212;
+}
+.bg-player {
+  background-color: #313131;
+}
+.mobileborder {
+  border-bottom: solid 1px #b8b8b8;
+}
+
+#leftScrool,
+#topBar,
+#rightScrool {
+  height: 90vh; /* Ensure all containers have the same height */
+  overflow-y: auto; /* Enable vertical scrolling within the containers */
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #474747;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #474747;
+}
+#arrow1 {
+  font-size: 1.5rem;
+}
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+#mobileNav {
+  display: none;
+}
+#mobilePlayer {
+  display: none;
+}
+@media (max-width: 763px) {
+  body {
+    height: 70%;
+    margin: 0;
+    overflow: hidden;
+  }
+  #title {
+    font-size: 3rem;
+  }
+  #arrow2 {
+    display: none;
+    font-size: 0.5;
+  }
+  #arrow1 {
+    font-size: 1rem;
+  }
+  #player {
+    display: none;
+  }
+  #mobileNav {
+    display: block;
+    position: relative;
+  }
+  #leftScrool,
+  #topBar,
+  #rightScrool {
+    height: 82vh; /* Ensure all containers have the same height */
+    overflow-y: auto; /* Enable vertical scrolling within the containers */
+  }
+
+  #mobilePlayer {
+    display: block;
+  }
+  #mobilePlayer img {
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+  }
+  #show {
+    display: none;
+  }
+  #bell {
+    display: none;
+  }
+  #singoloImg {
+    width: 30%;
+  }
+}
+.fs-7 {
+  font-size: 12px;
+}
