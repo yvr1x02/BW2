@@ -127,7 +127,18 @@
           </div>
 
           <!-- RANDOM ADS BANNER-->
-          .randomBanner
+          <div
+            class="row px-1 py-2"
+            id="bannerRow"
+            style="background: rgb(33, 37, 41); background: linear-gradient(14deg, rgba(33, 37, 41, 1) 0%, rgba(0, 0, 0, 1) 100%)"
+          >
+            <div class="col-2 d-flex align-items-center" id="albumImageCol">
+              <!-- L'immagine dell'album sarà inserita qui -->
+            </div>
+            <div class="col-10 ps-3 pt-3" id="artistDetailsCol">
+              <!-- I dettagli dell'artista saranno inseriti qui -->
+            </div>
+          </div>
 
           <!-- SINGOLI -->
           <p class="text-white fs-3 mt-3 mt-5 ms-2">Consigliati per te</p>
@@ -292,6 +303,7 @@
           crossorigin="anonymous"
         ></script>
         <script src="./token.js"></script>
+        <script src="./banner.js"></script>
         <script src="./script.js"></script>
         <script src="./artisti.js"></script>
         <script src="./albums.js"></script>
