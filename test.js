@@ -1,24 +1,24 @@
-const cardContainer = document.getElementById("banner-search");
-const searchInput = document.getElementById("search-input");
-const searchResults = document.getElementById("search-results");
-const rapidApiKey = "74b83fd89emsh70e15f203fee6dfp1aa455jsn0588b6257888";
+const _searchCardContainer = document.getElementById("banner-search");
+const _searchSearchInput = document.getElementById("search-input");
+const _searchSearchResults = document.getElementById("search-results");
+const _searchRapidApiKey = "74b83fd89emsh70e15f203fee6dfp1aa455jsn0588b6257888";
 
-const searchQueries = ["eminem", "taylor swift", "drake", "rihanna", "coldplay", "gorillaz"];
+const _searchSearchQueries = ["eminem", "taylor swift", "drake", "rihanna", "coldplay", "gorillaz"];
 
-const generateRandomId = () => {
+const _searchGenerateRandomId = () => {
   return Math.round(Math.random() * 100);
 };
-console.log(generateRandomId());
+console.log(_searchGenerateRandomId());
 
-console.log(searchQueries);
+console.log(_searchSearchQueries);
 
-const fetchSearchSong = (search) => {
-  const nameSearchValue = search;
-  const url = `https://deezerdevs-deezer.p.rapidapi.com/search?q=${nameSearchValue}`;
+const _searchFetchSearchSong = (search) => {
+  const _searchNameSearchValue = search;
+  const url = `https://deezerdevs-deezer.p.rapidapi.com/search?q=${_searchNameSearchValue}`;
   const options = {
     method: "GET",
     headers: {
-      "x-rapidapi-key": rapidApiKey,
+      "x-rapidapi-key": _searchRapidApiKey,
       "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
     },
   };
@@ -35,7 +35,7 @@ const fetchSearchSong = (search) => {
       console.log(data);
       if (data.data && data.data.length > 0) {
         const artistData = data.data[0];
-        createCard(artistData);
+        _searchCreateCard(artistData);
       } else {
         console.warn("Not Found");
       }
@@ -43,10 +43,10 @@ const fetchSearchSong = (search) => {
     .catch((err) => console.log(err));
 };
 
-const createCard = (artistData) => {
-  const card = document.createElement("div");
-  card.className = "card";
-  card.classList.add("card", "albums", "border-0", "p-0", "col-md-3", "p-3");
+const _searchCreateCard = (artistData) => {
+  const _searchCard = document.createElement("div");
+  _searchCard.className = "card";
+  _searchCard.classList.add("card", "albums", "border-0", "p-0", "col-md-3", "p-3");
 
   const img = document.createElement("img");
   img.src = artistData.album.cover_medium;
@@ -62,27 +62,27 @@ const createCard = (artistData) => {
   type.classList.add("text-secondary", "p-1", "px-2", "mt-1");
 
   const div = document.createElement("div");
-  const iconContainer = document.createElement("div");
-  iconContainer.classList.add("play-icon");
-  const playIcon = document.createElement("i");
-  playIcon.classList.add("fas", "fa-play");
+  const _searchIconContainer = document.createElement("div");
+  _searchIconContainer.classList.add("play-icon");
+  const _searchPlayIcon = document.createElement("i");
+  _searchPlayIcon.classList.add("fas", "fa-play");
 
-  iconContainer.appendChild(playIcon);
-  div.appendChild(iconContainer);
+  _searchIconContainer.appendChild(_searchPlayIcon);
+  div.appendChild(_searchIconContainer);
 
-  card.appendChild(img);
-  card.appendChild(name);
-  card.appendChild(type);
-  card.appendChild(div);
+  _searchCard.appendChild(img);
+  _searchCard.appendChild(name);
+  _searchCard.appendChild(type);
+  _searchCard.appendChild(div);
 
-  cardContainer.appendChild(card);
+  _searchCardContainer.appendChild(_searchCard);
 };
-const displayResults = (results) => {
-  searchResults.innerHTML = ""; // Ripulisce il campo
+const _searchDisplayResults = (results) => {
+  // _searchSearchResults.innerHTML = ""; // Ripulisce il campo
   if (results && results.length > 0) {
     results.forEach((result) => {
-      const card = document.createElement("div");
-      card.className = "card";
+      const _searchCard = document.createElement("div");
+      _searchCard.className = "card";
 
       const img = document.createElement("img");
       img.src = result.album.cover_medium;
@@ -94,30 +94,31 @@ const displayResults = (results) => {
       const album = document.createElement("p");
       album.textContent = result.album.title;
 
-      card.appendChild(img);
-      card.appendChild(name);
-      card.appendChild(album);
+      _searchCard.appendChild(img);
+      _searchCard.appendChild(name);
+      _searchCard.appendChild(album);
 
-      searchResults.appendChild(card);
+      _searchSearchResults.appendChild(_searchCard);
     });
   } else {
-    const noResults = document.createElement("p");
-    noResults.textContent = "No results found";
-    searchResults.appendChild(noResults);
+    const _searchNoResults = document.createElement("p");
+    _searchNoResults.textContent = "No results found";
+    _searchSearchResults.appendChild(_searchNoResults);
   }
 };
 
-searchInput.addEventListener("keypress", (e) => {
+_searchSearchInput.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
-    const query = searchInput.value.trim();
+    const query = _searchSearchInput.value.trim();
+
     if (query) {
-      fetchSearchSong(query);
+      _searchFetchSearchSong(query);
     }
   }
 });
 
 window.addEventListener("DOMContentLoaded", () => {
-  searchQueries.forEach((query) => {
-    fetchSearchSong(query);
+  _searchSearchQueries.forEach((query) => {
+    _searchFetchSearchSong(query);
   });
 });
