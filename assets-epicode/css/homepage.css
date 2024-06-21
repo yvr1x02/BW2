@@ -111,24 +111,3 @@ body {
 .fs-7 {
   font-size: 12px;
 }
-
-.play-icon {
-  position: absolute;
-  bottom: 11rem;
-  left: 80%;
-  transform: translateX(-50%);
-  width: 50px;
-  height: 50px;
-  background-color: #419f65; /* Sfondo verde */
-  color: #121212;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  opacity: 0; /* Nasconde l'icona inizialmente */
-  transition: opacity 0.3s ease; /* Effetto di transizione per l'opacità */
-}
-
-.artist:hover .play-icon {
-  opacity: 1;
-}

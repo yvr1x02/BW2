@@ -1,26 +1,60 @@
-.artistContainer {
-  gap: 1rem;
+.artist:hover {
+  z-index: 1;
+  background-color: #212529;
+}
+
+.artist {
+  background-color: transparent;
+  width: 12rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 0.2rem;
+  border-radius: 2%;
+  cursor: pointer;
 }
 
 /* Stile per il contenitore dell'icona */
 #play-icon-artist {
   display: flex;
   align-items: center;
+
   justify-content: center;
   width: 50px;
   height: 50px;
   background-color: #419f65;
   border-radius: 50%;
   position: absolute;
-  top: 65%;
+  top: 80%;
   left: 80%;
   transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.artist:hover #play-icon-artist {
+  opacity: 1;
+}
+
+/* Stile per l'icona di riproduzione */
+.play-icon-artist .fas {
+  font-size: 24px; /* Dimensione dell'icona */
+  color: black; /* Colore dell'icona */
+}
+
+/* Effetto hover per mostrare l'icona */
+.card:hover .play-icon-artist {
+  opacity: 1; /* Visibile al passaggio del mouse */
 }
 
 /* Assicurarsi che il contenitore della card abbia un contesto di posizionamento */
 .card img {
   position: relative;
   overflow: hidden; /* Nascondere l'icona se esce dai bordi della card */
+}
+
+.artist:hover .play-icon {
+  opacity: 1;
 }
 
 #topBar {
@@ -33,4 +67,8 @@
 
 body {
   font-family: "Circular";
+}
+
+.artistContainer {
+  gap: 1rem;
 }

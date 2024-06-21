@@ -32,7 +32,7 @@ const fetchArtist = (artistId) => {
       console.log(data); // Log dettagliato della risposta
       if (data.data && data.data.length > 0) {
         const artist = data.data[0];
-        createCard(artist);
+        createCard_artist(artist);
       } else {
         console.warn(`No artist found for ID: ${artistId}`);
       }
@@ -43,15 +43,34 @@ const fetchArtist = (artistId) => {
     });
 };
 
-const createCard = (artist) => {
+const createCard_artist = (artist) => {
   const card = document.createElement("div");
-  card.className = "card";
-  card.classList.add("card", "albums", "border-0", "p-0", "col-md-3", "p-3");
+  card.className = "card artist border-0 p-0 col-md-3 p-3";
+
+  // Create a container for the image and the play icon
+  const imgContainer = document.createElement("div");
+  imgContainer.classList.add("img-container", "position-relative");
 
   const img = document.createElement("img");
   img.src = artist.artist.picture_medium;
   img.alt = artist.name;
   img.classList.add("card-img-top", "rounded-circle");
+
+  // Create the play icon container and assign classes
+  const iconContainer = document.createElement("div");
+  iconContainer.classList.add("play-icon");
+  iconContainer.id = "play-icon-artist";
+
+  // Create the play icon and assign classes
+  const playIcon = document.createElement("i");
+  playIcon.classList.add("fas", "fa-play");
+
+  // Add the play icon to the icon container
+  iconContainer.appendChild(playIcon);
+
+  // Add the image and play icon container to the image container
+  imgContainer.appendChild(img);
+  imgContainer.appendChild(iconContainer);
 
   const name = document.createElement("h5");
   name.textContent = artist.artist.name;
@@ -61,22 +80,10 @@ const createCard = (artist) => {
   type.textContent = "Artista";
   type.classList.add("text-secondary", "p-1", "px-2", "mt-1");
 
-  // Creare il div del contenitore dell'icona
-  const iconContainer = document.createElement("div");
-  iconContainer.classList.add("play-icon");
-  iconContainer.id = "play-icon-artist";
-
-  // Creare l'icona di riproduzione e assegnare le classi
-  const playIcon = document.createElement("i");
-  playIcon.classList.add("fas", "fa-play");
-
-  // Aggiungere l'icona di riproduzione al contenitore dell'icona
-  iconContainer.appendChild(playIcon);
-
-  // Aggiungere l'icona di riproduzione al contenitore dell'icona
-  card.appendChild(img);
+  // Add the image container and other elements to the card
+  card.appendChild(imgContainer);
   card.appendChild(name);
-  card.appendChild(iconContainer);
+  card.appendChild(type);
 
   cardContainer.appendChild(card);
 };

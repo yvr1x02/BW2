@@ -1,4 +1,4 @@
-const _song_cardContainer = document.getElementById("singoliContainer");
+const _song_cardContainer = document.getElementById("songsContainer");
 
 // Funzione per generare un ID casuale tra 1 e 100
 const _song_generateRandomId = () => {
@@ -46,16 +46,42 @@ const _song_fetchArtist = (artistId) => {
 const _song_createCard = (artist) => {
   const card = document.createElement("div");
   card.className = "card";
-  card.classList.add("card", "albums", "border-0", "p-0", "col-md-3", "p-3");
+  card.classList.add("card", "songs", "border-0", "p-0", "col-md-3", "p-3");
+
+  // Create a container for the image and the play icon
+  const imgContainer = document.createElement("div");
+  imgContainer.classList.add("img-container", "position-relative");
 
   const img = document.createElement("img");
   img.src = artist.artist.picture_big;
   img.alt = artist.name;
   img.classList.add("card-img-top");
 
+  // Create the play icon container and assign classes
+  const iconContainer = document.createElement("div");
+  iconContainer.classList.add("play-icon");
+  iconContainer.id = "play-icon-songs";
+
+  // Create the play icon and assign classes
+  const playIcon = document.createElement("i");
+  playIcon.classList.add("fas", "fa-play");
+
+  // Add the play icon to the icon container
+  iconContainer.appendChild(playIcon);
+  // Add the image and play icon to the image container
+  imgContainer.appendChild(img);
+  imgContainer.appendChild(iconContainer);
+
   const name = document.createElement("h5");
   name.textContent = artist.title;
-  name.classList.add("text-white", "p-1", "px-2", "mt-2", "mb-0", "text-truncate");
+  name.classList.add(
+    "text-white",
+    "p-1",
+    "px-2",
+    "mt-2",
+    "mb-0",
+    "text-truncate"
+  );
 
   const nameArtist = document.createElement("p");
   nameArtist.textContent = artist.artist.name;
@@ -65,28 +91,14 @@ const _song_createCard = (artist) => {
   type.textContent = "Singolo";
   type.classList.add("text-secondary", "p-1", "px-2");
 
-  // Creare il div del contenitore dell'icona
-  const iconContainer = document.createElement("div");
-  iconContainer.classList.add("play-icon");
-  iconContainer.id = "play-icon-songs";
-
-  // Creare l'icona di riproduzione e assegnare le classi
-  const playIcon = document.createElement("i");
-  playIcon.classList.add("fas", "fa-play");
-
-  // Aggiungere l'icona di riproduzione al contenitore dell'icona
-  iconContainer.appendChild(playIcon);
-
-  // Aggiungere il contenitore dell'icona alla card
-  card.appendChild(img);
+  // Add the image container and other elements to the card
+  card.appendChild(imgContainer);
   card.appendChild(name);
   card.appendChild(nameArtist);
   card.appendChild(type);
-  card.appendChild(iconContainer);
 
   _song_cardContainer.appendChild(card);
 };
-
 // Chiamate API per ogni ID casuale generato
 _song_searchQueries.forEach((id) => {
   _song_fetchArtist(id);

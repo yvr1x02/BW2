@@ -1,9 +1,9 @@
-.singoli:hover {
+.songs:hover {
   z-index: 1;
   background-color: #212529;
 }
 
-.singoli {
+.songs {
   background-color: transparent;
   width: 12rem;
   padding-top: 1rem;
@@ -19,29 +19,40 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px; /* Larghezza del contenitore */
-  height: 50px; /* Altezza del contenitore */
-  background-color: #419f65; /* Colore di sfondo semi-trasparente */
-  border-radius: 50%; /* Per fare un cerchio */
-  position: absolute; /* Posizionamento assoluto */
-  top: 45%; /* Centrare verticalmente */
-  left: 80%; /* Centrare orizzontalmente */
-  transform: translate(-50%, -50%); /* Centratura perfetta */
+  width: 50px;
+  height: 50px;
+  background-color: #419f65;
+  border-radius: 50%;
+  position: absolute;
+  top: 80%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.songs:hover #play-icon-songs {
+  opacity: 1;
 }
 
 /* Stile per l'icona di riproduzione */
-#play-icon-songs .fas {
+.play-icon-songs .fas {
   font-size: 24px; /* Dimensione dell'icona */
   color: black; /* Colore dell'icona */
 }
 
+/* Effetto hover per mostrare l'icona */
+.card:hover .play-icon-songs {
+  opacity: 1; /* Visibile al passaggio del mouse */
+}
+
 /* Assicurarsi che il contenitore della card abbia un contesto di posizionamento */
-.card {
+.card img {
   position: relative;
   overflow: hidden; /* Nascondere l'icona se esce dai bordi della card */
 }
 
-.singoli:hover #play-icon-songs {
+.songs:hover .play-icon {
   opacity: 1;
 }
 
@@ -57,6 +68,6 @@ body {
   font-family: "Circular";
 }
 
-.singoliContainer {
+.songsContainer {
   gap: 1rem;
 }

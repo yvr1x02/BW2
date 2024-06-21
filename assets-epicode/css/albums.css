@@ -15,7 +15,7 @@
 }
 
 /* Stile per il contenitore dell'icona */
-#play-icon-album {
+#play-icon-albums {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,19 +24,25 @@
   background-color: #419f65;
   border-radius: 50%;
   position: absolute;
-  top: 50%;
+  top: 80%;
   left: 80%;
   transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.albums:hover #play-icon-albums {
+  opacity: 1;
 }
 
 /* Stile per l'icona di riproduzione */
-.play-icon-album .fas {
+.play-icon-albums .fas {
   font-size: 24px; /* Dimensione dell'icona */
   color: black; /* Colore dell'icona */
 }
 
 /* Effetto hover per mostrare l'icona */
-.card:hover .play-icon-album {
+.card:hover .play-icon-albums {
   opacity: 1; /* Visibile al passaggio del mouse */
 }
 
@@ -62,6 +68,6 @@ body {
   font-family: "Circular";
 }
 
-.albumContainer {
+.albumsContainer {
   gap: 1rem;
 }
