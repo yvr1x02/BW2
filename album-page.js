@@ -1,8 +1,25 @@
-const apiUrl = "https://striveschool-api.herokuapp.com/api/deezer/album/75621062";
-const API_KEY = "93161db213msh9b5055b449952d4p12b564jsna6015938db0f";
+document.addEventListener("DOMContentLoaded", () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const albumId = urlParams.get("albumId");
 
-function fetchAndDisplayAlbumInfo() {
-  fetch(apiUrl)
+  if (albumId) {
+    fetchAlbumData(albumId);
+  } else {
+    console.error("ID dell'album non trovato nella URL");
+  }
+});
+
+function fetchAlbumData(albumId) {
+  const apiUrl = `https://deezerdevs-deezer.p.rapidapi.com/album/${albumId}`;
+  const options = {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Key": rapidApiKey,
+      "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
+    },
+  };
+
+  fetch(apiUrl, options)
     .then((response) => {
       if (!response.ok) {
         throw new Error("Errore nel recupero dei dati");

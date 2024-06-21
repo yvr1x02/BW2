@@ -41,6 +41,8 @@ const album_fetchArtist = (albumId) => {
       console.error("Error:", error);
       // Gestione degli errori più dettagliata qui, es. mostrare un messaggio di errore all'utente
     });
+
+  console.log(`Album: ${albumId}`);
 };
 
 const album_createCard = (album) => {
@@ -80,6 +82,9 @@ const album_createCard = (album) => {
   card.appendChild(artist);
 
   album_cardContainer.appendChild(card);
+  card.addEventListener("click", () => {
+    window.location.href = `album-page.html?albumId=${album.album.id}`;
+  });
 };
 
 // Chiamate API per ogni ID casuale generato
