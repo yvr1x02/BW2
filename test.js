@@ -11,6 +11,7 @@ console.log(generateRandomId());
 console.log(searchQueries);
 
 const fetchSearchSong = (search) => {
+  const nameSearchValue = search;
   const url = `https://deezerdevs-deezer.p.rapidapi.com/search?q=${nameSearchValue}`;
   const options = {
     method: "GET",
@@ -19,10 +20,10 @@ const fetchSearchSong = (search) => {
       "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
     },
   };
+
   fetch(url, options)
     .then((resp) => {
       if (resp.ok) {
-        console.log(resp);
         return resp.json();
       } else {
         throw new Error("Errore nel rieprimento dei dati");
@@ -31,11 +32,8 @@ const fetchSearchSong = (search) => {
     .then((data) => {
       console.log(data);
       if (data.data && data.data.length > 0) {
-        const artist = data.data[0].artist.name;
-        const album = data.data[0].album.title;
-        console.log(artist);
-        console.log(album);
-        createCard(nameSearchValue);
+        const artistData = data.data[0];
+        createCard(artistData);
       } else {
         console.warn("Not Found");
       }
@@ -43,20 +41,18 @@ const fetchSearchSong = (search) => {
     .catch((err) => console.log(err));
 };
 
-const createCard = () => {
+const createCard = (artistData) => {
   const card = document.createElement("div");
   card.className = "card";
   card.classList.add("card", "albums", "border-0", "p-0", "col-md-3", "p-3");
 
-  const nameSearchValue = getElementById("cerca-canzone").value;
-
   const img = document.createElement("img");
-  img.src = artist.artist.picture_medium;
-  img.alt = artist.name;
+  img.src = artistData.album.cover_medium;
+  img.alt = artistData.artist.name;
   img.classList.add("card-img-top", "rounded-circle");
 
   const name = document.createElement("h5");
-  name.textContent = artist.artist.name;
+  name.textContent = artistData.artist.name;
   name.classList.add("text-white", "p-1", "px-2", "mt-2", "mb-0");
 
   const type = document.createElement("p");
@@ -69,18 +65,19 @@ const createCard = () => {
   const playIcon = document.createElement("i");
   playIcon.classList.add("fas", "fa-play");
 
+  iconContainer.appendChild(playIcon);
+  div.appendChild(iconContainer);
+
   card.appendChild(img);
   card.appendChild(name);
   card.appendChild(type);
-  iconContainer.appendChild(playIcon);
-  div.appendChild(iconContainer);
   card.appendChild(div);
 
   cardContainer.appendChild(card);
 };
 
-function updateInfos(searchObj) {}
-
-function addInfos(searchObj) {}
-
-window.addEventListener("DOMContentLoaded", fetchSearchSong);
+window.addEventListener("DOMContentLoaded", () => {
+  searchQueries.forEach((query) => {
+    fetchSearchSong(query);
+  });
+});
