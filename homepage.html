@@ -35,7 +35,7 @@
     <div class="container-fluid overflow-hidden g-0">
       <div class="row gx-2" id="container">
         <!-- NAVBAR IN ALTO A SINISTRA -->
-        <div class="col-2 d-flex flex-column">
+        <div class="col-2 d-flex flex-column" id="topLeft">
           <div class="p-3 bg-spotify rounded">
             <svg
               viewBox="0 0 1134 340"
@@ -537,8 +537,73 @@
             </div>
           </div>
         </div>
+        <div id="mobilePlayer" class="container-fluid g-0">
+          <div
+            class="d-flex justify-content-between align-items-center bg-player rounded mobileborder"
+          >
+            <div class="d-flex">
+              <img src="./assets-epicode/imgs/main/image-19.jpg" alt="" />
+              <div class="ps-1 text-white">
+                <p class="m-0 mt-2"><b>pippo</b></p>
+                <p class="text-white m-0">pippo</p>
+              </div>
+            </div>
+            <div>
+              <i class="bi bi-heart text-white fs-3 me-3"></i>
+              <i class="bi bi-play-fill text-white fs-1 me-2 mt-1"></i>
+            </div>
+          </div>
+        </div>
+        <nav id="mobileNav" class="container-fluid">
+          <div class="row p-1 pe-2 ps-4 pt-2">
+            <div class="col text-white">
+              <a href="./homepage.html" class="text-decoration-none"
+                ><i class="bi bi-house-door text-white fs-3 ms-1"> </i>
+              </a>
+              <a href="./homepage.html" class="text-decoration-none"
+                ><p class="text-white fs-7">home</p>
+              </a>
+            </div>
+            <div class="col text-white">
+              <a href="./search.html" class="text-decoration-none"
+                ><i class="bi bi-search text-white fs-3 ms-1"></i>
+              </a>
+              <a href="./search.html" class="text-decoration-none"
+                ><p class="text-white fs-7">search</p>
+              </a>
+            </div>
+            <div class="col text-white">
+              <a href="./search.html" class="text-decoration-none"
+                ><svg
+                  data-encore-id="icon"
+                  role="img"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  class="Svg-sc-ytk21e-0 bneLcE ms-3 mb-1"
+                  style="width: 30px"
+                >
+                  <path
+                    fill="#C7C8C9"
+                    d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z"
+                  ></path>
+                </svg>
+              </a>
+              <a href="./search.html" class="text-decoration-none"
+                ><p class="text-white fs-7">la tua libreria</p>
+              </a>
+            </div>
+            <div class="col text-white">
+              <a href="./search.html" class="text-decoration-none"
+                ><i class="bi bi-spotify fs-3 text-white ms-3"></i>
+              </a>
+              <a href="./search.html" class="text-decoration-none"
+                ><p class="text-white fs-7">scarica l'app</p>
+              </a>
+            </div>
+          </div>
+        </nav>
         <!-- FOOTER -->
-        <footer class="container-fluid position-relative z-3">
+        <footer class="container-fluid position-relative z-3" id="player">
           <div
             class="row bg-black rounded text-white mt-2 px-4 position-fixed bottom-0 start-0 end-0"
           >

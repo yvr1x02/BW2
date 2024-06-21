@@ -22,9 +22,9 @@ body {
 
 #leftScrool,
 #topBar,
-#rightScroll {
-  height: 90vh;
-  overflow-y: auto;
+#rightScrool {
+  height: 90vh; /* Ensure all containers have the same height */
+  overflow-y: auto; /* Enable vertical scrolling within the containers */
 }
 
 /* width */
@@ -45,4 +45,69 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #474747;
+}
+#arrow1 {
+  font-size: 1.5rem;
+}
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+#mobileNav {
+  display: none;
+}
+#mobilePlayer {
+  display: none;
+}
+@media (max-width: 763px) {
+  body {
+    height: 70%;
+    margin: 0;
+    overflow: hidden;
+  }
+  #title {
+    font-size: 3rem;
+  }
+  #arrow2 {
+    display: none;
+    font-size: 0.5;
+  }
+  #arrow1 {
+    font-size: 1rem;
+  }
+  #player {
+    display: none;
+  }
+  #mobileNav {
+    display: block;
+    position: relative;
+  }
+  #leftScrool,
+  #topBar,
+  #rightScrool {
+    height: 82vh; /* Ensure all containers have the same height */
+    overflow-y: auto; /* Enable vertical scrolling within the containers */
+  }
+
+  #mobilePlayer {
+    display: block;
+  }
+  #mobilePlayer img {
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+  }
+  #show {
+    display: none;
+  }
+  #bell {
+    display: none;
+  }
+  #singoloImg {
+    width: 30%;
+  }
+}
+.fs-7 {
+  font-size: 12px;
 }
