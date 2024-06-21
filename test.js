@@ -50,74 +50,108 @@ const _searchFetchSearchSong = (search) => {
 
 const _searchCreateCard = (artistData) => {
   const _searchCard = document.createElement("div");
-  _searchCard.className = "card";
-  _searchCard.classList.add(
-    "card",
-    "albums",
-    "border-0",
-    "p-0",
-    "col-md-3",
-    "p-3"
-  );
+  _searchCard.className = "card artist border-0 p-0 col-md-3 p-3";
+
+  // Create a container for the image and the play icon
+  const imgContainer = document.createElement("div");
+  imgContainer.classList.add("img-container", "position-relative");
 
   const img = document.createElement("img");
-  img.src = artistData.album.cover_medium;
-  img.alt = artistData.artist.name;
+  img.src = artistData.artist.picture_medium; // Adjusted to use artistData
+  img.alt = artistData.artist.name; // Adjusted to use artistData
   img.classList.add("card-img-top", "rounded-circle");
 
+  // Create the play icon container and assign classes
+  const iconContainer = document.createElement("div");
+  iconContainer.classList.add("play-icon");
+  iconContainer.id = "play-icon-artist";
+
+  // Create the play icon and assign classes
+  const playIcon = document.createElement("i");
+  playIcon.classList.add("fas", "fa-play");
+
+  // Add the play icon to the icon container
+  iconContainer.appendChild(playIcon);
+
+  // Add the image and play icon container to the image container
+  imgContainer.appendChild(img);
+  imgContainer.appendChild(iconContainer);
+
   const name = document.createElement("h5");
-  name.textContent = artistData.artist.name;
+  name.textContent = artistData.artist.name; // Adjusted to use artistData
   name.classList.add("text-white", "p-1", "px-2", "mt-2", "mb-0");
 
   const type = document.createElement("p");
   type.textContent = "Artista";
   type.classList.add("text-secondary", "p-1", "px-2", "mt-1");
 
-  const div = document.createElement("div");
-  const _searchIconContainer = document.createElement("div");
-  _searchIconContainer.classList.add("play-icon");
-  const _searchPlayIcon = document.createElement("i");
-  _searchPlayIcon.classList.add("fas", "fa-play");
-
-  _searchIconContainer.appendChild(_searchPlayIcon);
-  div.appendChild(_searchIconContainer);
-
-  _searchCard.appendChild(img);
+  // Add the image container and other elements to the card
+  _searchCard.appendChild(imgContainer);
   _searchCard.appendChild(name);
   _searchCard.appendChild(type);
-  _searchCard.appendChild(div);
 
   _searchCardContainer.appendChild(_searchCard);
 };
 
 const _searchDisplayResults = (results) => {
-  _searchSearchResults.innerHTML = ""; // Ripulisce il campo
-  const _searchTitleContainer = document.createElement("h4");
-  _searchTitleContainer.innerText = "Risultati";
-  _searchTitleContainer.className = "text-white";
-  _searchSearchResults.appendChild(_searchTitleContainer);
+  _searchSearchResults.innerHTML = ""; // Clear the field
 
   if (results && results.length > 0) {
     results.forEach((result) => {
-      const _searchCard = document.createElement("div");
+      const card = document.createElement("div");
+      card.className = "card";
+      card.classList.add(
+        "card",
+        "albums",
+        "border-0",
+        "p-0",
+        "col-md-3",
+        "p-3"
+      );
 
-      _searchCard.className = "card";
+      // Create a container for the image and the play icon
+      const imgContainer = document.createElement("div");
+      imgContainer.classList.add("img-container", "position-relative");
 
       const img = document.createElement("img");
-      img.src = result.album.cover_medium;
-      img.alt = result.artist.name;
+      img.src = result.album.cover_big;
+      img.alt = result.title;
+      img.classList.add("card-img-top");
+
+      // Create the play icon container and assign classes
+      const iconContainer = document.createElement("div");
+      iconContainer.classList.add("play-icon");
+      iconContainer.id = "play-icon-albums";
+
+      // Create the play icon and assign classes
+      const playIcon = document.createElement("i");
+      playIcon.classList.add("fas", "fa-play");
+
+      // Add the play icon to the icon container
+      iconContainer.appendChild(playIcon);
+
+      // Add the image and play icon to the image container
+      imgContainer.appendChild(img);
+      imgContainer.appendChild(iconContainer);
 
       const name = document.createElement("h5");
-      name.textContent = result.artist.name;
+      name.textContent = result.title;
+      name.classList.add("text-white", "p-1", "px-2", "mt-2", "mb-0");
 
-      const album = document.createElement("p");
-      album.textContent = result.album.title;
+      const artist = document.createElement("p");
+      artist.textContent = result.artist.name;
+      artist.classList.add("text-secondary", "p-1", "px-2", "mt-1");
 
-      _searchCard.appendChild(img);
-      _searchCard.appendChild(name);
-      _searchCard.appendChild(album);
+      // Add the image container and other elements to the card
+      card.appendChild(imgContainer);
+      card.appendChild(name);
+      card.appendChild(artist);
 
-      _searchSearchResults.appendChild(_searchCard);
+      _searchSearchResults.appendChild(card);
+
+      card.addEventListener("click", () => {
+        window.location.href = `album-page.html?albumId=${result.album.id}`;
+      });
     });
   } else {
     const _searchNoResults = document.createElement("p");
