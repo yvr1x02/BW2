@@ -5,11 +5,6 @@ const _searchRapidApiKey = "74b83fd89emsh70e15f203fee6dfp1aa455jsn0588b6257888";
 
 const _searchSearchQueries = ["eminem", "taylor swift", "drake", "rihanna", "coldplay", "gorillaz"];
 
-const _searchGenerateRandomId = () => {
-  return Math.round(Math.random() * 100);
-};
-console.log(_searchGenerateRandomId());
-
 console.log(_searchSearchQueries);
 
 const _searchFetchSearchSong = (search) => {
@@ -36,14 +31,13 @@ const _searchFetchSearchSong = (search) => {
       if (data.data && data.data.length > 0) {
         const artistData = data.data[0];
         _searchCreateCard(artistData);
+        _searchDisplayResults(data.data);
         return resp.json();
       } else {
         console.warn("Not Found");
       }
     })
-    .then((data) => {
-      _searchDisplayResults(data.data);
-    })
+
     .catch((err) => console.log(err));
 };
 
@@ -82,9 +76,16 @@ const _searchCreateCard = (artistData) => {
   _searchCardContainer.appendChild(_searchCard);
 };
 const _searchDisplayResults = (results) => {
+  _searchSearchResults.innerHTML = ""; // Ripulisce il campo
+  const _searchTitleContainer = document.createElement("h4");
+  _searchTitleContainer.innerText = "Risultati";
+  _searchTitleContainer.className = "text-white";
+  _searchSearchResults.appendChild(_searchTitleContainer);
+
   if (results && results.length > 0) {
     results.forEach((result) => {
       const _searchCard = document.createElement("div");
+
       _searchCard.className = "card";
 
       const img = document.createElement("img");
@@ -121,7 +122,5 @@ _searchSearchInput.addEventListener("keypress", (e) => {
 });
 
 window.addEventListener("DOMContentLoaded", () => {
-  _searchSearchQueries.forEach((query) => {
-    _searchFetchSearchSong(query);
-  });
+  _searchFetchSearchSong(query);
 });
