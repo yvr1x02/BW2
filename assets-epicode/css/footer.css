@@ -270,3 +270,6 @@ footer {
   rotate: 25deg;
   translate: 120px;
 }
+.cardBg {
+  background-color: transparent;
+}

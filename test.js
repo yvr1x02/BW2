@@ -3,7 +3,14 @@ const _searchSearchInput = document.getElementById("search-input");
 const _searchSearchResults = document.getElementById("search-results");
 const _searchRapidApiKey = "74b83fd89emsh70e15f203fee6dfp1aa455jsn0588b6257888";
 
-const _searchSearchQueries = ["eminem", "taylor swift", "drake", "rihanna", "coldplay", "gorillaz"];
+const _searchSearchQueries = [
+  "eminem",
+  "taylor swift",
+  "drake",
+  "rihanna",
+  "coldplay",
+  "gorillaz",
+];
 
 console.log(_searchSearchQueries);
 
@@ -44,7 +51,14 @@ const _searchFetchSearchSong = (search) => {
 const _searchCreateCard = (artistData) => {
   const _searchCard = document.createElement("div");
   _searchCard.className = "card";
-  _searchCard.classList.add("card", "albums", "border-0", "p-0", "col-md-3", "p-3");
+  _searchCard.classList.add(
+    "card",
+    "albums",
+    "border-0",
+    "p-0",
+    "col-md-3",
+    "p-3"
+  );
 
   const img = document.createElement("img");
   img.src = artistData.album.cover_medium;
@@ -75,6 +89,7 @@ const _searchCreateCard = (artistData) => {
 
   _searchCardContainer.appendChild(_searchCard);
 };
+
 const _searchDisplayResults = (results) => {
   _searchSearchResults.innerHTML = ""; // Ripulisce il campo
   const _searchTitleContainer = document.createElement("h4");
