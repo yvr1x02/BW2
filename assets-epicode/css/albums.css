@@ -14,21 +14,36 @@
   cursor: pointer;
 }
 
-.play-icon {
-  position: absolute;
-  bottom: 6rem;
-  left: 85%;
-  transform: translateX(-50%);
-  width: 40px;
-  height: 40px;
-  background-color: #419f65; /* Sfondo verde */
-  color: #121212;
+/* Stile per il contenitore dell'icona */
+#play-icon-album {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #419f65;
   border-radius: 50%;
-  opacity: 0; /* Nasconde l'icona inizialmente */
-  transition: opacity 0.3s ease; /* Effetto di transizione per l'opacità */
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+}
+
+/* Stile per l'icona di riproduzione */
+.play-icon-album .fas {
+  font-size: 24px; /* Dimensione dell'icona */
+  color: black; /* Colore dell'icona */
+}
+
+/* Effetto hover per mostrare l'icona */
+.card:hover .play-icon-album {
+  opacity: 1; /* Visibile al passaggio del mouse */
+}
+
+/* Assicurarsi che il contenitore della card abbia un contesto di posizionamento */
+.card img {
+  position: relative;
+  overflow: hidden; /* Nascondere l'icona se esce dai bordi della card */
 }
 
 .albums:hover .play-icon {

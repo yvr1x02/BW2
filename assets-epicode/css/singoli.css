@@ -14,28 +14,34 @@
   cursor: pointer;
 }
 
-#singoli {
-  border-radius: 2%;
-}
-
-.play-icon {
-  position: absolute;
-  bottom: 6rem;
-  left: 85%;
-  transform: translateX(-50%);
-  width: 40px;
-  height: 40px;
-  background-color: #419f65; /* Sfondo verde */
-  color: #121212;
+/* Stile per il contenitore dell'icona */
+#play-icon-songs {
   display: flex;
-  justify-content: center;
   align-items: center;
-  border-radius: 50%;
-  opacity: 0; /* Nasconde l'icona inizialmente */
-  transition: opacity 0.3s ease; /* Effetto di transizione per l'opacità */
+  justify-content: center;
+  width: 50px; /* Larghezza del contenitore */
+  height: 50px; /* Altezza del contenitore */
+  background-color: #419f65; /* Colore di sfondo semi-trasparente */
+  border-radius: 50%; /* Per fare un cerchio */
+  position: absolute; /* Posizionamento assoluto */
+  top: 45%; /* Centrare verticalmente */
+  left: 80%; /* Centrare orizzontalmente */
+  transform: translate(-50%, -50%); /* Centratura perfetta */
 }
 
-.singoli:hover .play-icon {
+/* Stile per l'icona di riproduzione */
+#play-icon-songs .fas {
+  font-size: 24px; /* Dimensione dell'icona */
+  color: black; /* Colore dell'icona */
+}
+
+/* Assicurarsi che il contenitore della card abbia un contesto di posizionamento */
+.card {
+  position: relative;
+  overflow: hidden; /* Nascondere l'icona se esce dai bordi della card */
+}
+
+.singoli:hover #play-icon-songs {
   opacity: 1;
 }
 
