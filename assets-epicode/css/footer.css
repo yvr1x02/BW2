@@ -270,7 +270,3 @@ footer {
   rotate: 25deg;
   translate: 120px;
 }
-#search-results {
-  display: flex;
-  flex-wrap: wrap;
-}

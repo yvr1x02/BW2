@@ -36,9 +36,13 @@ const _searchFetchSearchSong = (search) => {
       if (data.data && data.data.length > 0) {
         const artistData = data.data[0];
         _searchCreateCard(artistData);
+        return resp.json();
       } else {
         console.warn("Not Found");
       }
+    })
+    .then((data) => {
+      _searchDisplayResults(data.data);
     })
     .catch((err) => console.log(err));
 };
@@ -78,7 +82,6 @@ const _searchCreateCard = (artistData) => {
   _searchCardContainer.appendChild(_searchCard);
 };
 const _searchDisplayResults = (results) => {
-  // _searchSearchResults.innerHTML = ""; // Ripulisce il campo
   if (results && results.length > 0) {
     results.forEach((result) => {
       const _searchCard = document.createElement("div");
