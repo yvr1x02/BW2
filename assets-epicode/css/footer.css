@@ -40,10 +40,10 @@ input[type="range"]::-moz-range-thumb {
 .container {
   margin-bottom: 50px;
 }
-.card {
+/* .card {
   width: 100%;
   background-color: transparent;
-}
+} */
 .n1 {
   background-color: fuchsia;
 }
@@ -224,7 +224,7 @@ body {
   font-size: 12px;
 }
 
-#cerca-canzone {
+#search-input {
   background-color: rgb(42, 42, 42);
 
   /* border-radius: 50px; /
@@ -238,16 +238,16 @@ body {
   color: white;
   border: 1px solid #282828;
 }
-#cerca-canzone::placeholder {
+#search-input::placeholder {
   color: #b3b3b3;
   padding-left: 12px;
   margin-left: 5px;
 }
-#cerca-canzone:focus {
+#search-input:focus {
   background-color: #404040;
   border: 1px solid whitesmoke;
 }
-#cerca-canzone:hover {
+#search-input:hover {
   background-color: #393939;
   border: 1px solid white;
 }
