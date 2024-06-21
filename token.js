@@ -1,1 +1,1 @@
-const _searchRapidApiKey = "74b83fd89emsh70e15f203fee6dfp1aa455jsn0588b6257888";
+const rapidApiKey = "2a647460fcmshd1223cda88962d9p12958fjsn478de88d53bc";
